@@ -10,9 +10,6 @@
       <config />
     </shared>
   </component>
-  <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="gtoglass" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ec2c38-255b-48b9-8d7e-4eb20f1126cb" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/../.actionScriptProperties" afterPath="" />
@@ -550,13 +547,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TargetFinderActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="68" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1635">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TargetFinderActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="170" column="12" selection-start="4985" selection-end="4985" vertical-scroll-proportion="0.36397058" vertical-offset="2247" max-vertical-offset="6585">
+            <state line="215" column="0" selection-start="5931" selection-end="5931" vertical-scroll-proportion="0.0" vertical-offset="2909" max-vertical-offset="5415">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#7917#7918#0" expanded="true" />
+                <element signature="e#7948#7949#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Display.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/Display.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="99" column="0" selection-start="2665" selection-end="2665" vertical-scroll-proportion="-1.4871323" vertical-offset="2069" max-vertical-offset="3780">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1290,13 +1307,13 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/CompassView.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/CompassService.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/GlassService.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCameras.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/Display.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TwoActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/OneActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/FourActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ThreeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCameras.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java" />
       </list>
     </option>
@@ -1857,10 +1874,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="63" selection-start="1827" selection-end="1827" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="900">
-          <folding>
-            <element signature="e#1020#1038#0" expanded="true" />
-            <element signature="e#1352#1370#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1874,10 +1888,7 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="29" column="27" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
-          <folding>
-            <element signature="e#1020#1038#0" expanded="true" />
-            <element signature="e#1352#1370#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2010,13 +2021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/android-sdks/sources/android-15/android/app/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4031" column="30" selection-start="168109" selection-end="168109" vertical-scroll-proportion="0.33272058" vertical-offset="58769" max-vertical-offset="68340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlidePageFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="960">
@@ -2027,27 +2031,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/FindChpIncidentsCall.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="28" selection-start="252" selection-end="252" vertical-scroll-proportion="0.16544117" vertical-offset="0" max-vertical-offset="1170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCameras.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="109" column="134" selection-start="17225" selection-end="17225" vertical-scroll-proportion="0.40677965" vertical-offset="1374" max-vertical-offset="1905">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/Target.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="13" selection-start="163" selection-end="163" vertical-scroll-proportion="0.07263923" vertical-offset="0" max-vertical-offset="945">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="376" selection-end="376" vertical-scroll-proportion="0.01937046" vertical-offset="104" max-vertical-offset="930">
           <folding />
         </state>
       </provider>
@@ -2063,23 +2046,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/Display.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="524" selection-end="524" vertical-scroll-proportion="-3.2536764" vertical-offset="1830" max-vertical-offset="3780">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/android-sdks/sources/android-15/android/speech/tts/TextToSpeech.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="128" column="35" selection-start="4396" selection-end="4410" vertical-scroll-proportion="0.66238534" vertical-offset="1019" max-vertical-offset="19470">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="95" column="9" selection-start="3031" selection-end="3031" vertical-scroll-proportion="0.0" vertical-offset="629" max-vertical-offset="1905">
           <folding />
         </state>
       </provider>
@@ -2102,16 +2071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="72" column="17" selection-start="2886" selection-end="2886" vertical-scroll-proportion="0.090073526" vertical-offset="1031" max-vertical-offset="1680">
-          <folding>
-            <element signature="e#1020#1038#0" expanded="true" />
-            <element signature="e#1352#1370#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/OneActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="5" selection-start="458" selection-end="458" vertical-scroll-proportion="0.52389705" vertical-offset="0" max-vertical-offset="544">
@@ -2130,12 +2089,77 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/FindSheltersCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="0" selection-start="1091" selection-end="1091" vertical-scroll-proportion="0.66360295" vertical-offset="164" max-vertical-offset="1245">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-nodpi/icon_incident.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="26" selection-start="2462" selection-end="2462" vertical-scroll-proportion="0.25" vertical-offset="629" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCameras.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="164" selection-start="6974" selection-end="6974" vertical-scroll-proportion="0.5480226" vertical-offset="384" max-vertical-offset="915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="37" selection-start="1224" selection-end="1224" vertical-scroll-proportion="0.2723971" vertical-offset="45" max-vertical-offset="930">
+          <folding>
+            <element signature="e#1253#1261#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/Target.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="42" selection-start="352" selection-end="352" vertical-scroll-proportion="0.18159807" vertical-offset="0" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="68" selection-start="1468" selection-end="1468" vertical-scroll-proportion="0.0" vertical-offset="296" max-vertical-offset="1635">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdks/sources/android-15/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="36" selection-start="968" selection-end="968" vertical-scroll-proportion="0.33088234" vertical-offset="0" max-vertical-offset="69270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="170" column="12" selection-start="4985" selection-end="4985" vertical-scroll-proportion="0.36397058" vertical-offset="2247" max-vertical-offset="6585">
+        <state line="215" column="0" selection-start="5931" selection-end="5931" vertical-scroll-proportion="0.0" vertical-offset="2909" max-vertical-offset="5415">
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#7917#7918#0" expanded="true" />
+            <element signature="e#7948#7949#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="0" selection-start="2665" selection-end="2665" vertical-scroll-proportion="-1.4871323" vertical-offset="2069" max-vertical-offset="3780">
+          <folding />
         </state>
       </provider>
     </entry>

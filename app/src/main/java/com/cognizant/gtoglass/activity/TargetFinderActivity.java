@@ -2,6 +2,7 @@ package com.cognizant.gtoglass.activity;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.GeomagneticField;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -17,31 +18,17 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 
 import com.cognizant.gtoglass.R;
-import com.cognizant.gtoglass.http.FindChpIncidentsCall;
-import com.cognizant.gtoglass.http.FindChpIncidentsCall.OnFindChpIncidentsListener;
-import com.cognizant.gtoglass.http.FindRequestData;
-import com.cognizant.gtoglass.http.FindSheltersCall;
-import com.cognizant.gtoglass.http.FindSheltersCall.OnFindSheltersListener;
-import com.cognizant.gtoglass.http.Placemark;
 import com.cognizant.gtoglass.model.Target;
 import com.cognizant.gtoglass.model.TargetCities;
 import com.cognizant.gtoglass.util.MathUtils;
 import com.cognizant.gtoglass.view.Display;
 
-import java.util.LinkedList;
 import java.util.List;
 
 public class TargetFinderActivity extends Activity implements
-		SensorEventListener, LocationListener, OnFindChpIncidentsListener,
-		OnFindSheltersListener {
+		SensorEventListener, LocationListener  {
 
-	// TODO use wake lock to turn on screen when run
 
-	// TODO show distance under icon?
-
-	// TODO sort targets by closest target
-
-	// TODO option to pick other targets: shelter vs. camera, etc.
 
     private final float[] mRotationMatrix = new float[16];
 	public static final String TARGET_INDEX_EXTRA = TargetFinderActivity.class
@@ -76,7 +63,7 @@ public class TargetFinderActivity extends Activity implements
 
 	private List<Target> mTargets;
 
-	private int mTargetIndex;
+	private int mTargetIndex=0;
 
 	public int mTargetListIndex;
 
@@ -165,12 +152,15 @@ public class TargetFinderActivity extends Activity implements
 	}
 
     private void gotoTarget(float targetIndex) {
-        Log.i(LOG_TAG, "gotoTarget");
-        mTargetIndex = (int) targetIndex;
-        mDisplay.showTarget(mTargets.get(mTargetIndex));
-        if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_ADD, null);
-
+        if (mTargetListIndex <= 1) {
+        if(mTargetIndex!=(int) targetIndex){
+            mTargetIndex = (int) targetIndex;
+            mDisplay.showTarget(mTargets.get(mTargetIndex));
+            if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
+        }
+        }
     }
+
 
 
     private void previousTarget() {
@@ -199,6 +189,8 @@ public class TargetFinderActivity extends Activity implements
 			// If showing main AR screen on down swipe, leave program.
 			if (!mDisplay.isWebViewVisible()) {
 				finish();
+                //Intent intent = new Intent(this, ScreenSlideActivity.class);
+                //startActivity(intent);
 				// If showing a camera, go back to AR screen.
 			} else {
 				mDisplay.hideDetailsView();
@@ -280,34 +272,7 @@ public class TargetFinderActivity extends Activity implements
 		}
 
 		mForeground = true;
-		loadChpIfNeeded();
-	}
 
-	private void loadChpIfNeeded() {
-		Log.i(LOG_TAG, "loadChpIfNeeded");
-
-		// TODO check if have gotten a location yet?
-
-		if (2 == mTargetListIndex) {
-
-			final Location location = TargetCities.PALO_ALTO.asLocation();
-
-			FindRequestData request = new FindRequestData(
-					location.getLatitude(), location.getLongitude());
-
-			new FindChpIncidentsCall(this, this, request).downloadIncidents();
-			return;
-		}
-
-		if (3 == mTargetListIndex) {
-
-			final Location location = TargetCities.PALO_ALTO.asLocation();
-
-			FindRequestData request = new FindRequestData(
-					location.getLatitude(), location.getLongitude());
-
-			new FindSheltersCall(this, this, request).downloadShelters();
-		}
 	}
 
 	@Override
@@ -342,7 +307,7 @@ public class TargetFinderActivity extends Activity implements
             float magneticHeading = (float) Math.toDegrees(mOrientations[0]);
             mHeading = MathUtils.mod(computeTrueNorth(magneticHeading), 360.0f)
                     - ARM_DISPLACEMENT_DEGREES;
-            Log.i(LOG_TAG, "direction  " + mHeading);
+            //Log.i(LOG_TAG, "direction  " + mHeading);
             float mod =(mHeading/10);
             gotoTarget( mod);
         }
@@ -389,51 +354,7 @@ public class TargetFinderActivity extends Activity implements
 		return microDegrees / 1E6;
 	}
 
-	@Override
-	public void onFindChpIncidents(List<Placemark> data) {
-		Log.i(LOG_TAG, "onFindChpIncidents");
 
-		if (!mForeground) {
-			return;
-		}
-
-		List<Target> targets = new LinkedList<Target>();
-		for (Placemark p : data) {
-
-			double lat = microDegreesToDegrees(p.getLat());
-			double lon = microDegreesToDegrees(p.getLon());
-			Target target = new Target(null, lon, lat, p.getName());
-			target.description = p.getDescription();
-			target.indicatorDrawableId = R.drawable.marker_incident;
-			targets.add(target);
-		}
-
-		mTargets = targets;
-		mDisplay.showTarget(mTargets.get(mTargetIndex));
-	}
-
-	@Override
-	public void onFindShelters(List<Placemark> data) {
-		Log.i(LOG_TAG, "onFindShelters");
-
-		if (!mForeground) {
-			return;
-		}
-
-		List<Target> targets = new LinkedList<Target>();
-		for (Placemark p : data) {
-
-			double lat = microDegreesToDegrees(p.getLat());
-			double lon = microDegreesToDegrees(p.getLon());
-			Target target = new Target(null, lon, lat, p.getName());
-			target.description = p.getDescription();
-			target.indicatorDrawableId = R.drawable.marker_shelter;
-			targets.add(target);
-		}
-
-		mTargets = targets;
-		mDisplay.showTarget(mTargets.get(mTargetIndex));
-	}
     @Override
     protected void onStop() {
         super.onStop();
