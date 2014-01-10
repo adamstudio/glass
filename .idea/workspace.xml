@@ -553,7 +553,7 @@
       <file leaf-file-name="TargetFinderActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="141" column="9" selection-start="4373" selection-end="4373" vertical-scroll-proportion="0.56658596" vertical-offset="1542" max-vertical-offset="6585">
+            <state line="170" column="12" selection-start="4985" selection-end="4985" vertical-scroll-proportion="0.36397058" vertical-offset="2247" max-vertical-offset="6585">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1820,7 +1820,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33021078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33021078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -2132,7 +2132,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="9" selection-start="4373" selection-end="4373" vertical-scroll-proportion="0.56658596" vertical-offset="1542" max-vertical-offset="6585">
+        <state line="170" column="12" selection-start="4985" selection-end="4985" vertical-scroll-proportion="0.36397058" vertical-offset="2247" max-vertical-offset="6585">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

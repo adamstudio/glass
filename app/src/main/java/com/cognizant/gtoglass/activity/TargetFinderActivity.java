@@ -168,7 +168,7 @@ public class TargetFinderActivity extends Activity implements
         Log.i(LOG_TAG, "gotoTarget");
         mTargetIndex = (int) targetIndex;
         mDisplay.showTarget(mTargets.get(mTargetIndex));
-        //mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_ADD, null);
+        if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_ADD, null);
 
     }
 
