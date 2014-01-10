@@ -1,11 +1,11 @@
 package com.cognizant.gtoglass.http;
 
-import java.util.List;
-
 import android.app.Activity;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
+
+import java.util.List;
 
 /**
  * Finds shelters from http://sdcountyemergency.com/shelters/

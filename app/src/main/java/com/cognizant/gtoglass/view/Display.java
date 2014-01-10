@@ -1,14 +1,7 @@
 package com.cognizant.gtoglass.view;
 
-import com.cognizant.gtoglass.R;
-import com.cognizant.gtoglass.R.id;
-import com.cognizant.gtoglass.R.layout;
-import com.cognizant.gtoglass.activity.TargetFinderActivity;
-import com.cognizant.gtoglass.model.Target;
-
 import android.location.Location;
 import android.view.View;
-import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
@@ -18,11 +11,15 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.cognizant.gtoglass.R;
+import com.cognizant.gtoglass.activity.TargetFinderActivity;
+import com.cognizant.gtoglass.model.Target;
+
 public class Display {
 	
 	// TODO show page turn in corner if have camera image, etc.
 	
-	private static final String LOG_TAG = "ThroughWalls";
+	private static final String LOG_TAG = "GTOGlass";
 		
 	private static final float SCREEN_WIDTH_DEGREES = 15f;
 
@@ -32,7 +29,7 @@ public class Display {
 
 	private Float pitch;
 
-	private Target target;
+	public Target target;
 
 	private Double currentLat;
 

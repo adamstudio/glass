@@ -1,9 +1,6 @@
 package com.cognizant.gtoglass.http;
 
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
-
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.ProgressDialog;
@@ -11,13 +8,10 @@ import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
-import android.view.View;
-import android.view.animation.AnimationUtils;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cognizant.gtoglass.R;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 
 public abstract class AsyncCall {
 	

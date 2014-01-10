@@ -1,5 +1,10 @@
 package com.cognizant.gtoglass.http;
 
+import android.util.Log;
+
+import org.xml.sax.InputSource;
+import org.xml.sax.XMLReader;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -8,11 +13,6 @@ import java.util.List;
 
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
-
-import org.xml.sax.InputSource;
-import org.xml.sax.XMLReader;
-
-import android.util.Log;
 
 public class KmlResultParser {
 

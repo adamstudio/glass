@@ -1,10 +1,8 @@
 package com.cognizant.gtoglass.activity;
 
-import java.util.LinkedList;
-import java.util.List;
-
 import android.app.Activity;
 import android.content.Context;
+import android.hardware.GeomagneticField;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -13,6 +11,7 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
@@ -26,7 +25,11 @@ import com.cognizant.gtoglass.http.FindSheltersCall.OnFindSheltersListener;
 import com.cognizant.gtoglass.http.Placemark;
 import com.cognizant.gtoglass.model.Target;
 import com.cognizant.gtoglass.model.TargetCities;
+import com.cognizant.gtoglass.util.MathUtils;
 import com.cognizant.gtoglass.view.Display;
+
+import java.util.LinkedList;
+import java.util.List;
 
 public class TargetFinderActivity extends Activity implements
 		SensorEventListener, LocationListener, OnFindChpIncidentsListener,
@@ -40,11 +43,12 @@ public class TargetFinderActivity extends Activity implements
 
 	// TODO option to pick other targets: shelter vs. camera, etc.
 
+    private final float[] mRotationMatrix = new float[16];
 	public static final String TARGET_INDEX_EXTRA = TargetFinderActivity.class
 			.getName() + ".TARGET_INDEX_EXTRA";
 
-	public static final String[] TARGET_NAMES = new String[] { "Venture Solutions",
-			"H1 Solutions", "H2 Solutions", "H3 Solutions" };
+	public static final String[] TARGET_NAMES = new String[] {
+			"H1 Solutions", "H2 Solutions", "H3 Solutions", "Venture Solutions" };
 	
 	public static final int[] TARGET_ICONS = new int[] {
 		R.drawable.icon_camera,
@@ -52,13 +56,20 @@ public class TargetFinderActivity extends Activity implements
 		R.drawable.icon_incident,
 		R.drawable.icon_shelter,
 		};
-
-	private static final String LOG_TAG = "ThroughWalls";
+    private TextToSpeech mSpeech;
+    public static final String LOG_TAG = "GTOGlass";
 
 	private SensorManager mSensorManager;
 
-	private Sensor mOrientation;
+    private final float[] mOrientations = new float[9];
 
+    private float mHeading;
+
+    private static final int ARM_DISPLACEMENT_DEGREES = 6;
+
+    private GeomagneticField mGeomagneticField;
+	private Sensor mOrientation;
+    private float mPitch;
 	private LocationManager mLocationManager;
 
 	private Display mDisplay;
@@ -67,15 +78,25 @@ public class TargetFinderActivity extends Activity implements
 
 	private int mTargetIndex;
 
-	private int mTargetListIndex;
+	public int mTargetListIndex;
 
 	private boolean mForeground;
+
+    public float getPitch() {
+        return mPitch;
+    }
 
 	@Override
 	public void onCreate(final Bundle savedInstanceState) {
 		Log.i(LOG_TAG, "onCreate");
 		super.onCreate(savedInstanceState);
-
+        Log.i(LOG_TAG, (String) this.getTitle());
+        mSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                // Do nothing.
+            }
+        });
 		mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 		mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 		// TODO supposed to be more accurate to compose compass and
@@ -98,6 +119,11 @@ public class TargetFinderActivity extends Activity implements
 		mDisplay.setLocation(TargetCities.PALO_ALTO.asLocation());
 
 	}
+
+    @Override
+    public void onDestroy() {
+        mSpeech.shutdown();
+    }
 
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
@@ -137,7 +163,16 @@ public class TargetFinderActivity extends Activity implements
 		mDisplay.showTarget(mTargets.get(mTargetIndex));
 	}
 
-	private void previousTarget() {
+    private void gotoTarget(float targetIndex) {
+        Log.i(LOG_TAG, "gotoTarget");
+        mTargetIndex = (int) targetIndex;
+        mDisplay.showTarget(mTargets.get(mTargetIndex));
+
+        mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
+    }
+
+
+    private void previousTarget() {
 		Log.i(LOG_TAG, "previousTarget");
 
 		mTargetIndex--;
@@ -214,7 +249,17 @@ public class TargetFinderActivity extends Activity implements
 		// Log.i(LOG_TAG, "onResume");
 
 		super.onResume();
-		mSensorManager.registerListener(this, mOrientation,
+        mSensorManager.registerListener(this,
+                mSensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR),
+                SensorManager.SENSOR_DELAY_UI);
+
+        // The rotation vector sensor doesn't give us accuracy updates, so we observe the
+        // magnetic field sensor solely for those.
+        mSensorManager.registerListener(this,
+                mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),
+                SensorManager.SENSOR_DELAY_UI);
+
+        mSensorManager.registerListener(this, mOrientation,
 				SensorManager.SENSOR_DELAY_NORMAL);
 		final List<String> providers = mLocationManager.getAllProviders();
 		for (String provider : providers) {
@@ -273,15 +318,47 @@ public class TargetFinderActivity extends Activity implements
 		mLocationManager.removeUpdates(this);
 	}
 
+    public float getHeading() {
+        return mHeading;
+    }
+
 	@Override
 	public void onSensorChanged(final SensorEvent event) {
-		// Log.i(LOG_TAG, "onSensorChanged");
+        if (event.sensor.getType() == Sensor.TYPE_ROTATION_VECTOR) {
+            // Get the current heading from the sensor, then notify the listeners of the
+            // change.
+            SensorManager.getRotationMatrixFromVector(mRotationMatrix, event.values);
+            SensorManager.remapCoordinateSystem(mRotationMatrix, SensorManager.AXIS_X,
+                    SensorManager.AXIS_Z, mRotationMatrix);
+            SensorManager.getOrientation(mRotationMatrix, mOrientations);
+
+            // Store the pitch (used to display a message indicating that the user's head
+            // angle is too steep to produce reliable results.
+            mPitch = (float) Math.toDegrees(mOrientations[1]);
+
+            // Convert the heading (which is relative to magnetic north) to one that is
+            // relative to true north, using the user's current location to compute this.
+            float magneticHeading = (float) Math.toDegrees(mOrientations[0]);
+            mHeading = MathUtils.mod(computeTrueNorth(magneticHeading), 360.0f)
+                    - ARM_DISPLACEMENT_DEGREES;
+            Log.i(LOG_TAG, "direction  " + mHeading);
+            float mod =(mHeading/10);
+            gotoTarget( mod);
+        }
 
 		float azimuth_angle = event.values[0];
 		float pitch_angle = event.values[1];
 		float roll_angle = event.values[2];
 		mDisplay.setOrientation(azimuth_angle, pitch_angle, roll_angle);
 	}
+
+    private float computeTrueNorth(float heading) {
+        if (mGeomagneticField != null) {
+            return heading + mGeomagneticField.getDeclination();
+        } else {
+            return heading;
+        }
+    }
 
 	@Override
 	public void onLocationChanged(final Location location) {

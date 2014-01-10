@@ -1,10 +1,10 @@
 package com.cognizant.gtoglass.model;
 
+import android.location.Location;
+
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
-
-import android.location.Location;
 
 public class Target {
 	

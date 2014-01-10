@@ -3,8 +3,6 @@ package com.cognizant.gtoglass.model;
 import java.util.LinkedList;
 import java.util.List;
 
-import com.cognizant.gtoglass.R;
-
 public class TargetCities {
 
 	public static final Target Tour_Eiffel = new Target(null, -122.082825f, 37.497742, "Tour Eiffel");	

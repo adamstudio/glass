@@ -24,7 +24,7 @@ public class ScreenSlideActivity extends FragmentActivity {
 
 	// TODO icons for menu items
 	
-	private static final String LOG_TAG = "ThroughWalls";
+	private static final String LOG_TAG = "GTOGlass";
 	
     private static final int NUM_PAGES = TargetFinderActivity.TARGET_NAMES.length;
 

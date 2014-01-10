@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayoutPreviewToolWindow">
+    <option name="state">
+      <GlobalState />
+    </option>
+  </component>
   <component name="AndroidLayouts">
     <shared>
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="gtoglass" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ec2c38-255b-48b9-8d7e-4eb20f1126cb" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Game/Game.xcodeproj/project.xcworkspace/xcuserdata/devarajns.xcuserdatad/UserInterfaceState.xcuserstate" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GTOGlass.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Game/Game.xcodeproj/xcshareddata/xcschemes/Game.xcscheme" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Game/GameTests/GameTests-Info.plist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../Game/GameTests/en.lproj/InfoPlist.strings" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/android_support_v13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/commons_lang3_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/flexjson_2_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/xml/voice_trigger.xml" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../.actionScriptProperties" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../.flexProperties" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/../.gitignore" afterPath="" />
@@ -553,31 +550,66 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <file leaf-file-name="OneActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/OneActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="27" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="750">
+            <state line="12" column="35" selection-start="0" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
               <folding>
-                <element signature="e#1087#1105#0" expanded="true" />
-                <element signature="e#1302#1320#0" expanded="true" />
-                <element signature="e#2006#2024#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScreenSlideActivity.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java">
+      <file leaf-file-name="TwoActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TwoActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="49" selection-start="859" selection-end="859" vertical-scroll-proportion="0.79268295" vertical-offset="30" max-vertical-offset="2310">
+            <state line="17" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1542#2100#0" expanded="true" />
-                <element signature="e#2089#2090#0" expanded="true" />
-                <element signature="e#2146#2238#0" expanded="true" />
-                <element signature="e#2233#2234#0" expanded="true" />
-                <element signature="e#4202#4203#0" expanded="true" />
-                <element signature="e#4242#4243#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ThreeActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ThreeActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="28" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FourActivity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/FourActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="28" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ScreenSlidePageFragment.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlidePageFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="13" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="960">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TargetFinderActivity.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="128" column="33" selection-start="4025" selection-end="4025" vertical-scroll-proportion="-0.020220589" vertical-offset="1466" max-vertical-offset="6150">
+              <folding>
+                <element signature="e#2896#3053#0" expanded="true" />
+                <element signature="e#3042#3043#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1288,11 +1320,38 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/neatocode/throughwalls/activity/TargetFinderActivity.java" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java" />
         <option value="$PROJECT_DIR$/app/build/source/buildConfig/debug/com/neatocode/throughwalls/BuildConfig.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/OffsetIndicatorView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/PanActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/util/PanActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_mainact.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/MathUtils.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/CompassMenu.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/dimens.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/OrientationManager" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/OrientationManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/CompassMenuActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/OrientationManager.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/CompassView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/compass.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/CompassRenderer.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/CompassActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/CompassView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/CompassService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/GlassService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCameras.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/OneActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TwoActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ThreeActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/FourActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/Display.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java" />
       </list>
     </option>
   </component>
@@ -1301,6 +1360,25 @@
     <option name="width" value="1920" />
     <option name="height" value="974" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Android Lint</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>AndroidLintDuplicateActivity</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
@@ -1308,7 +1386,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -1327,19 +1405,21 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
+              <option name="myItemId" value="GTOGlass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
+              <option name="myItemId" value="GTOGlass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1349,21 +1429,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="GTOGlass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1374,18 +1440,10 @@
               <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
+              <option name="myItemId" value="GTOGlass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1404,44 +1462,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="xml" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="GTOGlass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1468,10 +1492,116 @@
               <option name="myItemId" value="gtoglass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
+              <option name="myItemId" value="GTOGlass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GTOGlass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gtoglass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GTOGlass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GTOGlass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gtoglass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GTOGlass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GTOGlass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gtoglass" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GTOGlass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1505,7 +1635,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
+              <option name="myItemId" value="GTOGlass" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -1521,26 +1651,10 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ThroughTheWalls-master" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GTOGlass" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="build" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1557,10 +1671,26 @@
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/libs/glasslib.jar" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/libs" />
+      <recent name="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util" />
       <recent name="$PROJECT_DIR$/app/src/main/res" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/libs" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/xml" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/drawable-mdpi" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/menu" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.app">
@@ -1730,33 +1860,35 @@
     <frame x="0" y="22" width="1920" height="974" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959402" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27751756" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32943925" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33021078" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2497332" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3290398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3995327" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1776,6 +1908,40 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="63" selection-start="1827" selection-end="1827" vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="900">
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
+            <element signature="e#1352#1370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="0" selection-start="961" selection-end="2243" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="27" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="750">
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
+            <element signature="e#1352#1370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="49" selection-start="859" selection-end="859" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="2310">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/import-summary.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
@@ -1790,53 +1956,335 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="12" selection-start="229" selection-end="229" vertical-scroll-proportion="0.1923077" vertical-offset="0" max-vertical-offset="546">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/xml/voice_trigger.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="546">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="27" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="750">
           <folding>
-            <element signature="e#1087#1105#0" expanded="true" />
-            <element signature="e#1302#1320#0" expanded="true" />
-            <element signature="e#2006#2024#0" expanded="true" />
+            <element signature="e#56#85#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_screen_slide_page.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="569" selection-end="569" vertical-scroll-proportion="0.521978" vertical-offset="0" max-vertical-offset="5490">
+        <state line="13" column="0" selection-start="450" selection-end="450" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="450">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/OffsetIndicatorView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="4" selection-start="786" selection-end="786" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1110">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_screen_slide.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="685">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdks/sources/android-15/android/util/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="157" column="22" selection-start="5412" selection-end="5412" vertical-scroll-proportion="0.33333334" vertical-offset="1873" max-vertical-offset="4920">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-nodpi/indicator_right.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="0" selection-start="3148" selection-end="3148" vertical-scroll-proportion="-15.888889" vertical-offset="981" max-vertical-offset="1500">
+          <folding>
+            <element signature="e#349#382#0" expanded="true" />
+            <element signature="e#407#442#0" expanded="true" />
+            <element signature="e#468#503#0" expanded="true" />
+            <element signature="e#527#560#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="12" selection-start="255" selection-end="255" vertical-scroll-proportion="0.1268116" vertical-offset="0" max-vertical-offset="828">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/MathUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="0" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0" vertical-offset="792" max-vertical-offset="1620">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_mainact.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="12" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.516441" vertical-offset="123" max-vertical-offset="1560">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="22" selection-start="1095" selection-end="1095" vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdks/sources/android-15/android/hardware/SensorManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1599" column="26" selection-start="60530" selection-end="60530" vertical-scroll-proportion="0.33333334" vertical-offset="23223" max-vertical-offset="30645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="17" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/android-sdks/sources/android-15/android/app/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4031" column="30" selection-start="168109" selection-end="168109" vertical-scroll-proportion="0.33272058" vertical-offset="58769" max-vertical-offset="68340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlidePageFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/FindChpIncidentsCall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="28" selection-start="252" selection-end="252" vertical-scroll-proportion="0.16544117" vertical-offset="0" max-vertical-offset="1170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCameras.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="109" column="134" selection-start="17225" selection-end="17225" vertical-scroll-proportion="0.40677965" vertical-offset="1374" max-vertical-offset="1905">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="49" selection-start="859" selection-end="859" vertical-scroll-proportion="0.79268295" vertical-offset="30" max-vertical-offset="2310">
+        <state line="96" column="0" selection-start="3032" selection-end="3032" vertical-scroll-proportion="0.0" vertical-offset="779" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/OneActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="35" selection-start="0" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1542#2100#0" expanded="true" />
-            <element signature="e#2089#2090#0" expanded="true" />
-            <element signature="e#2146#2238#0" expanded="true" />
-            <element signature="e#2233#2234#0" expanded="true" />
-            <element signature="e#4202#4203#0" expanded="true" />
-            <element signature="e#4242#4243#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TwoActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="0" selection-start="387" selection-end="387" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ThreeActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="28" selection-start="380" selection-end="380" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/FourActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="28" selection-start="379" selection-end="379" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="56" selection-start="3471" selection-end="3471" vertical-scroll-proportion="0.0" vertical-offset="704" max-vertical-offset="1620">
+          <folding>
+            <element signature="e#1020#1038#0" expanded="true" />
+            <element signature="e#1352#1370#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/Target.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="13" selection-start="163" selection-end="163" vertical-scroll-proportion="0.07263923" vertical-offset="0" max-vertical-offset="945">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="31" selection-start="376" selection-end="376" vertical-scroll-proportion="0.01937046" vertical-offset="104" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/GlassService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="54" selection-start="3462" selection-end="3462" vertical-scroll-proportion="0.50553507" vertical-offset="894" max-vertical-offset="2025">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2742#4819#0" expanded="true" />
+            <element signature="e#4808#4809#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/Display.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="10" selection-start="787" selection-end="787" vertical-scroll-proportion="0.32687652" vertical-offset="0" max-vertical-offset="3780">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="128" column="33" selection-start="4025" selection-end="4025" vertical-scroll-proportion="-0.020220589" vertical-offset="1466" max-vertical-offset="6150">
+          <folding>
+            <element signature="e#2896#3053#0" expanded="true" />
+            <element signature="e#3042#3043#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Android</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Android 4.0.3 Glass Development Kit Sneak Peek</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>app</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>Android API 17 Platform</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.317139" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>android-support-v13</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

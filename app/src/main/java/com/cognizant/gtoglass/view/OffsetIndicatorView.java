@@ -1,17 +1,16 @@
 package com.cognizant.gtoglass.view;
 
-import com.cognizant.gtoglass.R;
-import com.cognizant.gtoglass.R.drawable;
-
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.cognizant.gtoglass.R;
+
 public class OffsetIndicatorView extends View {
 	
-	private static final String LOG_TAG = "ThroughWalls";
+	private static final String LOG_TAG = "GTOGlass";
 	
 	private Float mOffsetPercent;
 	
