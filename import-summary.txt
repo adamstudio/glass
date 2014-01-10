@@ -1,0 +1,154 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+* .DS_Store
+* README.md
+* dist
+* dist/ThroughTheWalls.apk
+* doc
+* doc/.DS_Store
+* doc/HTML5Movie1
+* doc/HTML5Movie1.apk
+* doc/HTML5Movie1.zip
+* doc/HTML5Movie1/.DS_Store
+* doc/HTML5Movie1/AndroidManifest.xml
+* doc/HTML5Movie1/META-INF
+* doc/HTML5Movie1/META-INF/CERT.RSA
+* doc/HTML5Movie1/META-INF/CERT.SF
+* doc/HTML5Movie1/META-INF/MANIFEST.MF
+* doc/HTML5Movie1/assets
+* doc/HTML5Movie1/assets/.DS_Store
+* doc/HTML5Movie1/assets/www
+* doc/HTML5Movie1/assets/www/HTML5Video1.html
+* doc/HTML5Movie1/assets/www/Pentagon_News_Sample.ogg
+* doc/HTML5Movie1/assets/www/dizzy.mp4
+* doc/HTML5Movie1/classes.dex
+* doc/HTML5Movie1/res
+* doc/HTML5Movie1/res/drawable-hdpi
+* doc/HTML5Movie1/res/drawable-hdpi/ic_launcher.png
+* doc/HTML5Movie1/res/drawable-mdpi
+* doc/HTML5Movie1/res/drawable-mdpi/ic_launcher.png
+* doc/HTML5Movie1/res/drawable-xhdpi
+* doc/HTML5Movie1/res/drawable-xhdpi/ic_launcher.png
+* doc/HTML5Movie1/res/drawable-xxhdpi
+* doc/HTML5Movie1/res/drawable-xxhdpi/ic_launcher.png
+* doc/HTML5Movie1/res/layout
+* doc/HTML5Movie1/res/layout/activity_html5_movie_main.xml
+* doc/HTML5Movie1/res/menu
+* doc/HTML5Movie1/res/menu/html5_movie_main.xml
+* doc/HTML5Movie1/resources.arsc
+* doc/ThreeDCube1.apk
+* doc/example_requests
+* doc/example_requests/chp.kml
+* doc/glass_screenshots
+* doc/glass_screenshots/.DS_Store
+* doc/glass_screenshots/throughthewalls_01.jpg
+* doc/glass_screenshots/throughthewalls_11.jpg
+* doc/glass_screenshots/throughthewalls_12.jpg
+* doc/glass_screenshots/throughthewalls_15.jpg
+* doc/glass_screenshots/throughthewalls_18.jpg
+* doc/glass_screenshots/throughthewalls_19.jpg
+* doc/glass_screenshots/throughthewalls_2.jpg
+* doc/glass_screenshots/throughthewalls_3.jpg
+* doc/glass_screenshots/throughthewalls_4.jpg
+* doc/glass_screenshots/throughthewalls_5.jpg
+* doc/glass_screenshots/throughthewalls_6.jpg
+* doc/glass_screenshots/throughthewalls_7.jpg
+* doc/glass_screenshots/throughthewalls_8.jpg
+* doc/graphics
+* doc/graphics/.DS_Store
+* doc/graphics/CityIcons
+* doc/graphics/CityIcons/.DS_Store
+* doc/graphics/CityIcons/AndroidManifest.xml
+* doc/graphics/CityIcons/META-INF
+* doc/graphics/CityIcons/META-INF/CERT.RSA
+* doc/graphics/CityIcons/META-INF/CERT.SF
+* doc/graphics/CityIcons/META-INF/MANIFEST.MF
+* doc/graphics/CityIcons/assets
+* doc/graphics/CityIcons/assets/.DS_Store
+* doc/graphics/CityIcons/assets/www
+* doc/graphics/CityIcons/assets/www/15631953-big-city-icons.jpg
+* doc/graphics/CityIcons/assets/www/Big_Ben.jpg
+* doc/graphics/CityIcons/assets/www/Brandenburg-Gate-342px.html
+* doc/graphics/CityIcons/assets/www/Brandenburg-Gate-342px.jpg
+* doc/graphics/CityIcons/assets/www/CityIcons.css
+* doc/graphics/CityIcons/assets/www/CityIcons.html
+* doc/graphics/CityIcons/assets/www/Cologne_Cathedral.jpg
+* doc/graphics/CityIcons/assets/www/Forbidden_City.jpg
+* doc/graphics/CityIcons/assets/www/Leaning_Tower_of_Pisa.jpg
+* doc/graphics/CityIcons/assets/www/MyDiceRG1.apk
+* doc/graphics/CityIcons/assets/www/NYC_Empire_State_Building.jpg
+* doc/graphics/CityIcons/assets/www/Shwedagon.jpg
+* doc/graphics/CityIcons/assets/www/Sydney_Opera_House.jpg
+* doc/graphics/CityIcons/assets/www/Tour_Eiffel.jpg
+* doc/graphics/CityIcons/assets/www/generic-city-icon.jpg
+* doc/graphics/CityIcons/classes.dex
+* doc/graphics/CityIcons/res
+* doc/graphics/CityIcons/res/.DS_Store
+* doc/graphics/CityIcons/res/drawable-hdpi
+* doc/graphics/CityIcons/res/drawable-hdpi/ic_launcher.png
+* doc/graphics/CityIcons/res/drawable-mdpi
+* doc/graphics/CityIcons/res/drawable-mdpi/ic_launcher.png
+* doc/graphics/CityIcons/res/drawable-xhdpi
+* doc/graphics/CityIcons/res/drawable-xhdpi/ic_launcher.png
+* doc/graphics/CityIcons/res/drawable-xxhdpi
+* doc/graphics/CityIcons/res/drawable-xxhdpi/ic_launcher.png
+* doc/graphics/CityIcons/res/layout
+* doc/graphics/CityIcons/res/layout/activity_city_icons_main.xml
+* doc/graphics/CityIcons/res/menu
+* doc/graphics/CityIcons/res/menu/city_icons_main.xml
+* doc/graphics/CityIcons/resources.arsc
+* doc/graphics/mock.svg
+* doc/graphics/original
+* doc/graphics/original/eastshores_Warning_Notification.svg
+* doc/graphics/original/firefight03.svg
+* doc/graphics/original/hydrant.svg
+* doc/graphics/original/johnny_automatic_surveillance_camera.svg
+* doc/graphics/original/tiothy_City_Art_Deco.svg
+* doc/graphics/renders
+* doc/graphics/renders/corner.png
+* doc/graphics/renders/icon_camera.png
+* doc/graphics/renders/icon_city.png
+* doc/graphics/renders/icon_incident.png
+* doc/graphics/renders/icon_shelter.png
+* doc/graphics/renders/indicator_left.png
+* doc/graphics/renders/indicator_right.png
+* doc/graphics/renders/marker_camera.png
+* doc/graphics/renders/marker_city.png
+* doc/graphics/renders/marker_incident.png
+* doc/graphics/renders/marker_shelter.png
+* proguard-project.txt
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+* AndroidManifest.xml => app/src/main/AndroidManifest.xml
+* assets/ => app/src/main/assets/
+* libs/android-support-v13.jar => app/libs/android-support-v13.jar
+* libs/commons-lang3-3.1.jar => app/libs/commons-lang3-3.1.jar
+* libs/flexjson-2.1.jar => app/libs/flexjson-2.1.jar
+* res/ => app/src/main/res/
+* src/ => app/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)

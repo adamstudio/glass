@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merger>
+
+    <dataSet config="main" >
+        <source path="/Users/devarajns/github/GTOGlass/app/src/main/assets" >
+            <file
+                name="Roboto-Black.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-Black.ttf" />
+            <file
+                name="Roboto-BlackItalic.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-BlackItalic.ttf" />
+            <file
+                name="Roboto-Bold.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-Bold.ttf" />
+            <file
+                name="Roboto-BoldCondensed.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-BoldCondensed.ttf" />
+            <file
+                name="Roboto-BoldCondensedItalic.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-BoldCondensedItalic.ttf" />
+            <file
+                name="Roboto-BoldItalic.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-BoldItalic.ttf" />
+            <file
+                name="Roboto-Condensed.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-Condensed.ttf" />
+            <file
+                name="Roboto-CondensedItalic.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-CondensedItalic.ttf" />
+            <file
+                name="Roboto-Italic.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-Italic.ttf" />
+            <file
+                name="Roboto-Light.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-Light.ttf" />
+            <file
+                name="Roboto-LightItalic.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-LightItalic.ttf" />
+            <file
+                name="Roboto-Medium.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-Medium.ttf" />
+            <file
+                name="Roboto-MediumItalic.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-MediumItalic.ttf" />
+            <file
+                name="Roboto-Regular.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-Regular.ttf" />
+            <file
+                name="Roboto-Thin.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-Thin.ttf" />
+            <file
+                name="Roboto-ThinItalic.ttf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/Roboto-ThinItalic.ttf" />
+            <file
+                name="RobotoSpecimenBook.pdf"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/RobotoSpecimenBook.pdf" />
+            <file
+                name="www/15631953-big-city-icons.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/15631953-big-city-icons.jpg" />
+            <file
+                name="www/Big_Ben.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Big_Ben.jpg" />
+            <file
+                name="www/Brandenburg-Gate-342px.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Brandenburg-Gate-342px.html" />
+            <file
+                name="www/Brandenburg-Gate-342px.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Brandenburg-Gate-342px.jpg" />
+            <file
+                name="www/CityIcons.css"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/CityIcons.css" />
+            <file
+                name="www/CityIcons.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/CityIcons.html" />
+            <file
+                name="www/Cologne_Cathedral.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Cologne_Cathedral.html" />
+            <file
+                name="www/Cologne_Cathedral.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Cologne_Cathedral.jpg" />
+            <file
+                name="www/Forbidden_City.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Forbidden_City.html" />
+            <file
+                name="www/Forbidden_City.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Forbidden_City.jpg" />
+            <file
+                name="www/generic-city-icon.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/generic-city-icon.html" />
+            <file
+                name="www/generic-city-icon.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/generic-city-icon.jpg" />
+            <file
+                name="www/Leaning_Tower_of_Pisa.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Leaning_Tower_of_Pisa.html" />
+            <file
+                name="www/Leaning_Tower_of_Pisa.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Leaning_Tower_of_Pisa.jpg" />
+            <file
+                name="www/MyDiceRG1.apk"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/MyDiceRG1.apk" />
+            <file
+                name="www/NYC_Empire_State_Building.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/NYC_Empire_State_Building.html" />
+            <file
+                name="www/NYC_Empire_State_Building.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/NYC_Empire_State_Building.jpg" />
+            <file
+                name="www/Shwedagon.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Shwedagon.html" />
+            <file
+                name="www/Shwedagon.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Shwedagon.jpg" />
+            <file
+                name="www/Sydney_Opera_House.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Sydney_Opera_House.html" />
+            <file
+                name="www/Sydney_Opera_House.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Sydney_Opera_House.jpg" />
+            <file
+                name="www/Tour_Eiffel.html"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Tour_Eiffel.html" />
+            <file
+                name="www/Tour_Eiffel.jpg"
+                path="/Users/devarajns/github/GTOGlass/app/src/main/assets/www/Tour_Eiffel.jpg" />
+        </source>
+    </dataSet>
+    <dataSet config="debug" >
+        <source path="/Users/devarajns/github/GTOGlass/app/src/debug/assets" />
+    </dataSet>
+
+</merger>
