@@ -14,4 +14,14 @@ public class OneActivity extends TargetFinderActivity {
         super.onCreate(savedInstanceState);
         mTargetListIndex =1;
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
+
 }
+

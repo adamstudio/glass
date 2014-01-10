@@ -91,19 +91,19 @@ public class TargetFinderActivity extends Activity implements
 		Log.i(LOG_TAG, "onCreate");
 		super.onCreate(savedInstanceState);
         Log.i(LOG_TAG, (String) this.getTitle());
-        mSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
-            @Override
-            public void onInit(int status) {
-                // Do nothing.
-            }
-        });
+
 		mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
 		mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 		// TODO supposed to be more accurate to compose compass and
 		// accelerometer yourself
 		mOrientation = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
 		mDisplay = new Display(this);
-
+        mSpeech= new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                // Do nothing.
+            }
+        });
 		// TODO sort nearest first
 		// TODO add cameras, shelters, etc..
 
@@ -123,6 +123,7 @@ public class TargetFinderActivity extends Activity implements
     @Override
     public void onDestroy() {
         mSpeech.shutdown();
+        super.onDestroy();
     }
 
 	@Override
@@ -167,8 +168,8 @@ public class TargetFinderActivity extends Activity implements
         Log.i(LOG_TAG, "gotoTarget");
         mTargetIndex = (int) targetIndex;
         mDisplay.showTarget(mTargets.get(mTargetIndex));
+        //mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_ADD, null);
 
-        mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
     }
 
 
@@ -433,5 +434,9 @@ public class TargetFinderActivity extends Activity implements
 		mTargets = targets;
 		mDisplay.showTarget(mTargets.get(mTargetIndex));
 	}
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
 
 }

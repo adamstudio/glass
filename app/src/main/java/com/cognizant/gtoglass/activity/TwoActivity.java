@@ -14,4 +14,13 @@ public class TwoActivity extends TargetFinderActivity {
         super.onCreate(savedInstanceState);
         mTargetListIndex =2;
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }

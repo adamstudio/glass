@@ -68,6 +68,8 @@
 
             <meta-data android:name="com.google.android.glass.VoiceTrigger" android:resource="@xml/voice_trigger"/>
         </activity>
+        <activity android:label="GTO" android:name="com.cognizant.gtoglass.activity.TargetFinderActivity"/>
+
     </application>
 
 </manifest>

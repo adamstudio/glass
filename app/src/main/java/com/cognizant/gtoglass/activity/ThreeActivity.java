@@ -14,4 +14,12 @@ public class ThreeActivity extends TargetFinderActivity {
         super.onCreate(savedInstanceState);
         mTargetListIndex =3;
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }

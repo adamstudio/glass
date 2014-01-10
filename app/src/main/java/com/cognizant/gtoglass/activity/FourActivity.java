@@ -14,4 +14,12 @@ public class FourActivity extends TargetFinderActivity {
         super.onCreate(savedInstanceState);
         mTargetListIndex =4;
     }
+    @Override
+    protected void onStop() {
+        super.onStop();
+    }
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }

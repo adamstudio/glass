@@ -98,6 +98,10 @@
                 android:name="com.google.android.glass.VoiceTrigger"
                 android:resource="@xml/voice_trigger" />
         </activity>
+        <activity
+            android:name="com.cognizant.gtoglass.activity.TargetFinderActivity"
+            android:label="GTO" />
+
     </application>
 
 </manifest>
