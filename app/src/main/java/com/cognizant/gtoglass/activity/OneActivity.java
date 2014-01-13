@@ -13,7 +13,7 @@ public class OneActivity extends TargetFinderActivity {
     @Override
     public void onCreate(final Bundle savedInstanceState) {
         Log.i(LOG_TAG, "onCreate");
-        mTargetListIndex =1;
+        mTargetListIndex =0;
 
         super.onCreate(savedInstanceState);
     }
