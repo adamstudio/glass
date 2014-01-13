@@ -93,15 +93,11 @@ public class TargetFinderActivity extends Activity implements
 		// TODO sort nearest first
 		// TODO add cameras, shelters, etc..
 
-		mTargetListIndex = getIntent().getIntExtra(TARGET_INDEX_EXTRA, 0);
-		//if (mTargetListIndex <= 1) {
+		mTargetListIndex = getIntent().getIntExtra(TARGET_INDEX_EXTRA, mTargetListIndex);
+
 			mTargets = Target.TARGET_LISTS.get(mTargetListIndex);
 			mDisplay.showTarget(mTargets.get(mTargetIndex));
-		//}
 
-		// XXX use default location as Palo Alto for now.
-		// This gets overridden by any last used location in onResume,
-		// and by any fresh locations.
 
 	}
 
@@ -196,14 +192,14 @@ public class TargetFinderActivity extends Activity implements
 			// On phone, volume keys move through cameras
 		case KeyEvent.KEYCODE_TAB:
 		case KeyEvent.KEYCODE_VOLUME_UP:
-			if (event.isShiftPressed()) {
+			/*if (event.isShiftPressed()) {
 				previousTarget();
 			} else {
 				nextTarget();
-			}
+			}*/
 			return true;
 		case KeyEvent.KEYCODE_VOLUME_DOWN:
-			previousTarget();
+			//previousTarget();
 			return true;
 
 			// Tapping views the camera.

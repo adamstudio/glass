@@ -3,6 +3,8 @@ package com.cognizant.gtoglass.activity;
 import android.os.Bundle;
 import android.util.Log;
 
+import com.cognizant.gtoglass.model.Target;
+
 /**
  * Created by devarajns on 10/01/14.
  */
@@ -11,15 +13,8 @@ public class ThreeActivity extends TargetFinderActivity {
     @Override
     public void onCreate(final Bundle savedInstanceState) {
         Log.i(LOG_TAG, "onCreate");
-        super.onCreate(savedInstanceState);
         mTargetListIndex =3;
-    }
-    @Override
-    protected void onStop() {
-        super.onStop();
-    }
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
+
+        super.onCreate(savedInstanceState);
     }
 }

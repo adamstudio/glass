@@ -11,7 +11,11 @@ public class Target {
 	public static final List<List<Target>> TARGET_LISTS = new LinkedList<List<Target>>();
 	
 	static {
-		TARGET_LISTS.add(TargetCameras.CAMERAS);
+        TARGET_LISTS.add(TargetCameras.SOLUTIONS4);
+        TARGET_LISTS.add(TargetCameras.SOLUTIONS1);
+        TARGET_LISTS.add(TargetCameras.SOLUTIONS2);
+        TARGET_LISTS.add(TargetCameras.SOLUTIONS3);
+        TARGET_LISTS.add(TargetCameras.VENTURES);
 	}
 
 	public static String getImageUrlFromD2(final String url) {
