@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <!-- From: file:/Users/devarajns/github/GTOGlass/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string-array name="direction_abbreviations">
@@ -40,24 +40,24 @@
         <item>north west</item>
         <item>north north west</item>
     </string-array>
-    <!-- From: file:/Users/devarajns/github/GTOGlass/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/colors.xml -->
     <eat-comment />
 
     <color name="black_overlay">#66000000</color>
-    <!-- From: file:/Users/devarajns/github/GTOGlass/app/src/main/res/values/attrs.xml -->
+    <!-- From: file:/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/attrs.xml -->
     <eat-comment />
 
     <declare-styleable name="ButtonBarContainerTheme">
         <attr name="metaButtonBarStyle" format="reference" />
         <attr name="metaButtonBarButtonStyle" format="reference" />
     </declare-styleable>
-    <!-- From: file:/Users/devarajns/github/GTOGlass/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/dimens.xml -->
     <eat-comment />
 
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="card_margin">40px</dimen>
-    <!-- From: file:/Users/devarajns/github/GTOGlass/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/strings.xml -->
     <eat-comment />
 
     <string name="accelerometer">Accelerometer</string>
@@ -75,7 +75,7 @@
     <string name="title_activity_compass_menu">CompassMenu</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_pan">PanActivity</string>
-    <!-- From: file:/Users/devarajns/github/GTOGlass/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/styles.xml -->
     <eat-comment />
 
     <style name="AppBaseTheme" parent="android:Theme.Light">

@@ -18,4 +18,4 @@
     android:id="@+id/pager"
     android:layout_width="match_parent"
     android:layout_height="match_parent" />
-<!-- From: file:/Users/devarajns/github/GTOGlass/app/src/main/res/layout/activity_screen_slide.xml -->
+<!-- From: file:/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/activity_screen_slide.xml -->

@@ -2,94 +2,94 @@
 <merger>
 
     <dataSet config="main" >
-        <source path="/Users/devarajns/github/GTOGlass/app/src/main/res" >
+        <source path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res" >
             <file
                 name="logo1"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-mdpi/logo1.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-mdpi/logo1.png"
                 qualifiers="mdpi"
                 type="drawable" />
             <file
                 name="corner"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/corner.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/corner.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="icon_camera"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/icon_camera.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/icon_camera.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="icon_city"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/icon_city.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/icon_city.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="icon_incident"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/icon_incident.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/icon_incident.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="icon_shelter"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/icon_shelter.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/icon_shelter.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="indicator_left"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/indicator_left.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/indicator_left.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="indicator_right"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/indicator_right.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/indicator_right.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="marker_camera"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/marker_camera.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/marker_camera.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="marker_city"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/marker_city.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/marker_city.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="marker_incident"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/marker_incident.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/marker_incident.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="marker_shelter"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/drawable-nodpi/marker_shelter.png"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/drawable-nodpi/marker_shelter.png"
                 qualifiers="nodpi"
                 type="drawable" />
             <file
                 name="activity_main"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/layout/activity_main.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/activity_main.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_mainact"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/layout/activity_mainact.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/activity_mainact.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="activity_screen_slide"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/layout/activity_screen_slide.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/activity_screen_slide.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="fragment_screen_slide_page"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/layout/fragment_screen_slide_page.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/fragment_screen_slide_page.xml"
                 qualifiers=""
                 type="layout" />
             <file
                 name="main"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/menu/main.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/menu/main.xml"
                 qualifiers=""
                 type="menu" />
             <file
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/values/attrs.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="ButtonBarContainerTheme" >
                     <attr
@@ -101,13 +101,13 @@
                 </declare-styleable>
             </file>
             <file
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/values/colors.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/colors.xml"
                 qualifiers="" >
                 <color name="black_overlay" >#66000000
                 </color>
             </file>
             <file
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/values/dimens.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/dimens.xml"
                 qualifiers="" >
                 <dimen name="card_margin" >40px
                 </dimen>
@@ -117,7 +117,7 @@
                 </dimen>
             </file>
             <file
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/values/strings.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/strings.xml"
                 qualifiers="" >
                 <string name="glass_voice_prompt" >GTO
                 </string>
@@ -243,9 +243,9 @@ NNW
                 </string>
                 <string name="geolocation" >GeoLocation
                 </string>
-                <string name="hello_world" >Hello world!
-                </string>
                 <string name="read_aloud" >Read aloud
+                </string>
+                <string name="hello_world" >Hello world!
                 </string>
                 <string name="accelerometer" >Accelerometer
                 </string>
@@ -253,7 +253,7 @@ NNW
                 </string>
             </file>
             <file
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/values/styles.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/styles.xml"
                 qualifiers="" >
 
                 <style name="ButtonBar" >
@@ -312,13 +312,13 @@ NNW
                 </style>
             </file>
             <file
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/values-sw720dp-land/dimens.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values-sw720dp-land/dimens.xml"
                 qualifiers="sw720dp-land" >
                 <dimen name="activity_horizontal_margin" >128dp
                 </dimen>
             </file>
             <file
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/values-v11/styles.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values-v11/styles.xml"
                 qualifiers="v11" >
 
                 <style
@@ -357,7 +357,7 @@ true
                 </style>
             </file>
             <file
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/values-v14/styles.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values-v14/styles.xml"
                 qualifiers="v14" >
 
                 <style
@@ -368,21 +368,21 @@ true
                 </style>
             </file>
             <file
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/values-w820dp/dimens.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values-w820dp/dimens.xml"
                 qualifiers="w820dp" >
                 <dimen name="activity_horizontal_margin" >64dp
                 </dimen>
             </file>
             <file
                 name="voice_trigger"
-                path="/Users/devarajns/github/GTOGlass/app/src/main/res/xml/voice_trigger.xml"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/xml/voice_trigger.xml"
                 qualifiers=""
                 type="xml" />
         </source>
-        <source path="/Users/devarajns/github/GTOGlass/app/build/res/rs/debug" />
+        <source path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/build/res/rs/debug" />
     </dataSet>
     <dataSet config="debug" >
-        <source path="/Users/devarajns/github/GTOGlass/app/src/debug/res" />
+        <source path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/debug/res" />
     </dataSet>
 
 </merger>

@@ -207,6 +207,10 @@ public class TargetFinderActivity extends Activity implements
 			toggleShowUrl();
 			return true;
 
+        case KeyEvent.KEYCODE_CAMERA:
+            Intent intent = new Intent(this, ScreenSlideActivity.class);
+            startActivity(intent);
+            return true;
 		default:
 			return super.dispatchKeyEvent(event);
 		}
