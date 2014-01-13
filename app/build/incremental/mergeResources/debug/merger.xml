@@ -243,9 +243,9 @@ NNW
                 </string>
                 <string name="geolocation" >GeoLocation
                 </string>
-                <string name="read_aloud" >Read aloud
-                </string>
                 <string name="hello_world" >Hello world!
+                </string>
+                <string name="read_aloud" >Read aloud
                 </string>
                 <string name="accelerometer" >Accelerometer
                 </string>
@@ -255,6 +255,17 @@ NNW
             <file
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/styles.xml"
                 qualifiers="" >
+
+                <style
+                    name="AppBaseTheme"
+                    parent="android:Theme.Light" >
+
+                    <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+                    -->
+                </style>
 
                 <style name="ButtonBar" >
                     <item name="android:paddingLeft">
@@ -272,17 +283,6 @@ NNW
                     <item name="android:background">
 @android:drawable/bottom_bar
                     </item>
-                </style>
-
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Light" >
-
-                    <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-                    -->
                 </style>
 
                 <style

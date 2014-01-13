@@ -22,10 +22,10 @@ import com.cognizant.gtoglass.R;
 
 public class ScreenSlideActivity extends FragmentActivity {
 
-	// TODO icons for menu items
-	
-	private static final String LOG_TAG = "GTOGlass";
-	
+    // TODO icons for menu items
+
+    private static final String LOG_TAG = "GTOGlass";
+
     private static final int NUM_PAGES = TargetFinderActivity.TARGET_NAMES.length;
 
     private ViewPager mPager;
@@ -36,14 +36,14 @@ public class ScreenSlideActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-		getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		getWindow().addFlags(
-				WindowManager.LayoutParams.FLAG_FULLSCREEN);
-		
+        getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().addFlags(
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
 
         setContentView(R.layout.activity_screen_slide);
-        
+
         mPager = (ViewPager) findViewById(R.id.pager);
         mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
         mPager.setAdapter(mPagerAdapter);
@@ -57,74 +57,74 @@ public class ScreenSlideActivity extends FragmentActivity {
                 invalidateOptionsMenu();
             }
         });
-        
+
         mPager.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				select();
-			}
-		});
+            @Override
+            public void onClick(View v) {
+                select();
+            }
+        });
     }
 
     public void next() {
         mPager.setCurrentItem(mPager.getCurrentItem() + 1);
     }
-    
+
     public void prev() {
         mPager.setCurrentItem(mPager.getCurrentItem() - 1);
     }
-    
+
     public void select() {
-    	Intent intent = new Intent(this, TargetFinderActivity.class);
-    	intent.putExtra(TargetFinderActivity.TARGET_INDEX_EXTRA, mPager.getCurrentItem());
-    	startActivity(intent);
+        Intent intent = new Intent(this, TargetFinderActivity.class);
+        intent.putExtra(TargetFinderActivity.TARGET_INDEX_EXTRA, mPager.getCurrentItem());
+        startActivity(intent);
     }
 
-	@Override
-	public boolean onTouchEvent(MotionEvent event) {
-		Log.i(LOG_TAG, "onTouchEvent, event = " + event);
-		return super.onTouchEvent(event);
-	}
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        Log.i(LOG_TAG, "onTouchEvent, event = " + event);
+        return super.onTouchEvent(event);
+    }
 
-	@Override
-	public boolean dispatchKeyEvent(final KeyEvent event) {
-		Log.i(LOG_TAG, "dispatchKeyEvent, event = " + event);
+    @Override
+    public boolean dispatchKeyEvent(final KeyEvent event) {
+        Log.i(LOG_TAG, "dispatchKeyEvent, event = " + event);
 
-		final int action = event.getAction();
-		if (action != KeyEvent.ACTION_DOWN) {
-			return false;
-		}
+        final int action = event.getAction();
+        if (action != KeyEvent.ACTION_DOWN) {
+            return false;
+        }
 
-		final int keyCode = event.getKeyCode();
-		switch (keyCode) {
-		// Back button on standard Android, swipe down on Google Glass
-		case KeyEvent.KEYCODE_BACK:
-			finish();
-			return true;
+        final int keyCode = event.getKeyCode();
+        switch (keyCode) {
+            // Back button on standard Android, swipe down on Google Glass
+            case KeyEvent.KEYCODE_BACK:
+                finish();
+                return true;
 
-			// Left and right swipe through the cameras on Google Glass.
-			// On phone, volume keys move through cameras
-		case KeyEvent.KEYCODE_TAB:
-		case KeyEvent.KEYCODE_VOLUME_UP:
-			if ( event.isShiftPressed() ) {
-				prev();
-			} else {
-				next();
-			}
-			return true;
-		case KeyEvent.KEYCODE_VOLUME_DOWN:
-			prev();
-			return true;
+            // Left and right swipe through the cameras on Google Glass.
+            // On phone, volume keys move through cameras
+            case KeyEvent.KEYCODE_TAB:
+            case KeyEvent.KEYCODE_VOLUME_UP:
+                if (event.isShiftPressed()) {
+                    prev();
+                } else {
+                    next();
+                }
+                return true;
+            case KeyEvent.KEYCODE_VOLUME_DOWN:
+                prev();
+                return true;
 
-			// Tapping views the camera.
-		case KeyEvent.KEYCODE_DPAD_CENTER:
-			select();
-			return true;
+            // Tapping views the camera.
+            case KeyEvent.KEYCODE_DPAD_CENTER:
+                select();
+                return true;
 
-		default:
-			return super.dispatchKeyEvent(event);
-		}
-	}
+            default:
+                return super.dispatchKeyEvent(event);
+        }
+    }
 
     /**
      * A simple pager adapter that represents 5 {@link ScreenSlidePageFragment} objects, in

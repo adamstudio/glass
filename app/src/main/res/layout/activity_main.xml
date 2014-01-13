@@ -10,7 +10,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".TargetFinderActivity" >
+    tools:context=".TargetFinderActivity">
 
     <com.cognizant.gtoglass.view.OffsetIndicatorView
         android:id="@+id/indicator"
@@ -24,13 +24,12 @@
         android:layout_marginLeft="-40px"
         android:layout_gravity="left"
         android:background="#000"
-        android:visibility="gone"
-        />
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal" >
+        android:orientation="horizontal">
 
         <ImageView
             android:id="@+id/leftIndicator"
@@ -57,7 +56,7 @@
         android:layout_height="match_parent"
         android:gravity="bottom"
         android:orientation="vertical"
-        tools:context=".TargetFinderActivity" >
+        tools:context=".TargetFinderActivity">
 
         <TextView
             android:id="@+id/location"

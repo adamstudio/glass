@@ -1,21 +1,12 @@
 package com.cognizant.gtoglass.util;
 
-import android.app.PendingIntent;
 import android.app.Service;
 import android.content.ContentResolver;
-import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.res.Resources;
-import android.hardware.SensorManager;
-import android.location.LocationManager;
-import android.os.Binder;
 import android.os.IBinder;
 import android.preference.PreferenceManager;
-import android.speech.tts.TextToSpeech;
 import android.util.Log;
-
-import com.cognizant.gtoglass.R;
 
 import com.google.glass.location.GlassLocationManager;
 import com.google.glass.timeline.TimelineHelper;
@@ -42,6 +33,7 @@ public class GlassService extends Service {
     public static final String TAG = "UB-GS";
     private static final String SERVICE_ITEM_URL = "intent_url";
     private static final String SERVICE_ITEM_TEXT = "intent_text";
+
     @Override
     public int onStartCommand(Intent intent, int flags, int startid) {
         super.onStartCommand(intent, flags, startid);
@@ -69,6 +61,7 @@ public class GlassService extends Service {
     public IBinder onBind(Intent intent) {
         return null;
     }
+
     private void requestAndUpdateTimeline(final ContentResolver cr, final TimelineHelper tlHelper) {
         Runnable r = new Runnable() {
             @Override
@@ -86,7 +79,7 @@ public class GlassService extends Service {
                 MenuItem readAloud = MenuItem.newBuilder()
                         .setAction(MenuItem.Action.READ_ALOUD).build();
                 MenuItem share = MenuItem.newBuilder()
-                         .setAction(MenuItem.Action.SHARE).build();
+                        .setAction(MenuItem.Action.SHARE).build();
                 MenuItem customOption = MenuItem.newBuilder()
                         .addValue(MenuValue.newBuilder()
                                 .setDisplayName("Random Picture")
@@ -115,6 +108,7 @@ public class GlassService extends Service {
         };
         Executors.newSingleThreadExecutor().execute(r);
     }
+
     private static String generateHtml() {
         String html = "" +
                 "<article class=\"photo\">" +

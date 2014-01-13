@@ -4,68 +4,68 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 public class Placemark extends Location {
 
-	private String name;
-	
-	private String snippet;
-	
-	private String address;
-	
-	private String coordinates;
+    private String name;
 
-	private String baloonText;
-	
-	private String description;
-	
-	public String getName() {
-		return name;
-	}
+    private String snippet;
 
-	public void setName(String name) {
-		this.name = name;
-	}
+    private String address;
 
-	public String getSnippet() {
-		return snippet;
-	}
+    private String coordinates;
 
-	public void setSnippet(String snippet) {
-		this.snippet = snippet;
-	}
+    private String baloonText;
 
-	public String getCoordinates() {
-		return coordinates;
-	}
+    private String description;
 
-	public void setCoordinates(String coordinates) {
-		this.coordinates = coordinates;
-	}
+    public String getName() {
+        return name;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public void setName(String name) {
+        this.name = name;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public String getSnippet() {
+        return snippet;
+    }
 
-	public String getBaloonText() {
-		return baloonText;
-	}
+    public void setSnippet(String snippet) {
+        this.snippet = snippet;
+    }
 
-	public void setBaloonText(String baloonText) {
-		this.baloonText = baloonText;
-	}
+    public String getCoordinates() {
+        return coordinates;
+    }
 
-	public String toString() {
-		return ToStringBuilder.reflectionToString(this);
-	}
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
+    }
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getDescription() {
-		return description;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getBaloonText() {
+        return baloonText;
+    }
+
+    public void setBaloonText(String baloonText) {
+        this.baloonText = baloonText;
+    }
+
+    public String toString() {
+        return ToStringBuilder.reflectionToString(this);
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
+    }
 
 }

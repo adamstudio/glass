@@ -6,13 +6,13 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="50"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -37,7 +37,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Z: 0.0" />
-        
+
         <TextView
             android:id="@+id/diffX"
             android:layout_width="wrap_content"
@@ -55,14 +55,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Diff Z: 0.0" />
-        
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="50"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="wrap_content"
@@ -87,13 +87,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Alt: 0.0" />
-        
+
         <TextView
             android:id="@+id/geoBear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Bearing: 0.0" />
-        
+
     </LinearLayout>
 
 </LinearLayout>

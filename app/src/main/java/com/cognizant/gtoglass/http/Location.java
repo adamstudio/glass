@@ -6,41 +6,41 @@ import flexjson.JSON;
 
 public class Location implements Comparable<Location> {
 
-	private Float distanceFromDestination;
+    private Float distanceFromDestination;
 
-	protected int lat;
-	
-	protected int lon;
+    protected int lat;
 
-	@JSON(include = false)
-	public Float getDistanceFromDestination() {
-		return distanceFromDestination;
-	}
+    protected int lon;
 
-	public void setDistanceFromDestination(Float distance) {
-		this.distanceFromDestination = distance;
-	}
-	
-	public void setLat(int latE6) {
-		this.lat = latE6;
-	}
+    @JSON(include = false)
+    public Float getDistanceFromDestination() {
+        return distanceFromDestination;
+    }
 
-	public void setLon(int lonE6) {
-		this.lon = lonE6;
-	}
+    public void setDistanceFromDestination(Float distance) {
+        this.distanceFromDestination = distance;
+    }
 
-	public int getLat() {
-		return lat;
-	}
+    public void setLat(int latE6) {
+        this.lat = latE6;
+    }
 
-	public int getLon() {
-		return lon;
-	}
+    public void setLon(int lonE6) {
+        this.lon = lonE6;
+    }
 
-	public int compareTo(Location rhs) {
-		return new CompareToBuilder()
-			.append(distanceFromDestination, rhs.distanceFromDestination)
-			.toComparison();
-	}
-	
+    public int getLat() {
+        return lat;
+    }
+
+    public int getLon() {
+        return lon;
+    }
+
+    public int compareTo(Location rhs) {
+        return new CompareToBuilder()
+                .append(distanceFromDestination, rhs.distanceFromDestination)
+                .toComparison();
+    }
+
 }

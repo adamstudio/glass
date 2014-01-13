@@ -40,26 +40,26 @@ public class ScreenSlidePageFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState) {
+                             Bundle savedInstanceState) {
         // Inflate the layout containing a title and body text.
         ViewGroup rootView = (ViewGroup) inflater
                 .inflate(R.layout.fragment_screen_slide_page, container, false);
 
         // Set the title view to show the page number.
         ((TextView) rootView.findViewById(android.R.id.text1)).setText(
-        		TargetFinderActivity.TARGET_NAMES[mPageNumber]);
-        
+                TargetFinderActivity.TARGET_NAMES[mPageNumber]);
+
         ImageView imageView = (ImageView) rootView.findViewById(R.id.image1);
         imageView.setImageResource(TargetFinderActivity.TARGET_ICONS[mPageNumber]);
-        
+
         rootView.setOnClickListener(new OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-		        ((ScreenSlideActivity) getActivity()).select();
-			}
-		});
-        
+
+            @Override
+            public void onClick(View v) {
+                ((ScreenSlideActivity) getActivity()).select();
+            }
+        });
+
 
         return rootView;
     }

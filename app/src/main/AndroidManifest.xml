@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cognizant.gtoglass"
     android:versionCode="2"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -23,7 +23,7 @@
         android:allowBackup="true"
         android:icon="@drawable/logo1"
         android:label="@string/app_name"
-        android:theme="@style/AppTheme" >
+        android:theme="@style/AppTheme">
 
         <uses-library
             android:name="com.google.android.glass"
@@ -32,7 +32,7 @@
 
         <activity
             android:name="com.cognizant.gtoglass.activity.ScreenSlideActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -45,7 +45,7 @@
         </activity>
         <activity
             android:name="com.cognizant.gtoglass.activity.OneActivity"
-            android:label="H1 Solutions" >
+            android:label="H1 Solutions">
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -57,7 +57,7 @@
         </activity>
         <activity
             android:name="com.cognizant.gtoglass.activity.TwoActivity"
-            android:label="H2 Solutions" >
+            android:label="H2 Solutions">
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
 
@@ -70,7 +70,7 @@
         </activity>
         <activity
             android:name="com.cognizant.gtoglass.activity.ThreeActivity"
-            android:label="H3 Solutions" >
+            android:label="H3 Solutions">
 
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
@@ -84,7 +84,7 @@
         </activity>
         <activity
             android:name="com.cognizant.gtoglass.activity.FourActivity"
-            android:label="Venture Ideas" >
+            android:label="Venture Ideas">
 
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />

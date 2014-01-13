@@ -12,18 +12,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6ec2c38-255b-48b9-8d7e-4eb20f1126cb" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/pre-dexed/debug/android-support-v13-9a8760f6832871c5a10bf6feccf71b51c70a3c54.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/pre-dexed/debug/commons-lang3-3.1-8d42881fc61b23035f9c90ed0075181b1b88cb80.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/pre-dexed/debug/flexjson-2.1-08c0ef8cf8fe195f26c485e0c09b91c7c04e3494.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/build/pre-dexed/debug/glasslib-6899ac183e814a65371ca07f4de27108a181dfc6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/CompassMenu.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/CompassService.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/OrientationManager" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/CTS_Lab_logo_01.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/CTS_Lab_logo_02.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/drawable-mdpi/CTS_Lab_logo_03.png" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/AsyncCall.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/AsyncCall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/Brandenburg-Gate-342px.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/Brandenburg-Gate-342px.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/source/buildConfig/debug/com/cognizant/gtoglass/BuildConfig.java" afterPath="$PROJECT_DIR$/app/build/source/buildConfig/debug/com/cognizant/gtoglass/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/CityIcons.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/CityIcons.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/Cologne_Cathedral.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/Cologne_Cathedral.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/DialogUtil.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/DialogUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/Display.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/Display.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/FindChpIncidentsCall.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/FindChpIncidentsCall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/FindRequestData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/FindRequestData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/FindSheltersCall.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/FindSheltersCall.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/Forbidden_City.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/Forbidden_City.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/FourActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/FourActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/GlassService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/GlassService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/KmlElementHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/KmlElementHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/KmlResultParser.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/KmlResultParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/Leaning_Tower_of_Pisa.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/Leaning_Tower_of_Pisa.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/Location.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/Location.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/MathUtils.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/util/MathUtils.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/NYC_Empire_State_Building.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/NYC_Empire_State_Building.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/OffsetIndicatorView.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/OffsetIndicatorView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/OneActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/OneActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/Placemark.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/Placemark.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlidePageFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlidePageFragment.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/ShelterElementHandler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/ShelterElementHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/ShelterResultParser.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/http/ShelterResultParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/Shwedagon.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/Shwedagon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/Sydney_Opera_House.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/Sydney_Opera_House.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/Target.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/Target.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCameras.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/model/TargetCameras.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ThreeActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ThreeActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/Tour_Eiffel.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/Tour_Eiffel.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TwoActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TwoActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_mainact.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_mainact.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_screen_slide_page.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_screen_slide_page.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/assets/www/generic-city-icon.html" afterPath="$PROJECT_DIR$/app/src/main/assets/www/generic-city-icon.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" afterPath="$PROJECT_DIR$/app/src/main/res/menu/main.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ThroughTheWalls-master.iws" />
@@ -91,7 +119,7 @@
       <file leaf-file-name="TargetFinderActivity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="208" column="0" selection-start="5594" selection-end="5594" vertical-scroll-proportion="0.28921568" vertical-offset="2508" max-vertical-offset="4980">
+            <state line="226" column="0" selection-start="6831" selection-end="6831" vertical-scroll-proportion="-0.04901961" vertical-offset="3420" max-vertical-offset="5415">
               <folding />
             </state>
           </provider>
@@ -562,7 +590,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -845,6 +872,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -913,19 +941,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -951,6 +966,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1066,7 +1094,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1920" height="974" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1080,7 +1108,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32827103" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25233644" sideWeight="0.84877527" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25233644" sideWeight="0.84877527" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1244,13 +1272,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_screen_slide_page.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="0" selection-start="450" selection-end="450" vertical-scroll-proportion="-7.2222223" vertical-offset="0" max-vertical-offset="450">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/view/OffsetIndicatorView.java">
@@ -1259,13 +1287,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_screen_slide.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="685">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/android-sdks/sources/android-15/android/util/Log.java">
@@ -1279,6 +1307,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="0" selection-start="3148" selection-end="3148" vertical-scroll-proportion="-15.888889" vertical-offset="981" max-vertical-offset="1500">
           <folding>
@@ -1288,9 +1319,6 @@
             <element signature="e#527#560#0" expanded="false" />
           </folding>
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/dimens.xml">
@@ -1308,13 +1336,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_mainact.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="12" selection-start="1066" selection-end="1066" vertical-scroll-proportion="0.516441" vertical-offset="123" max-vertical-offset="1560">
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
@@ -1332,13 +1360,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="17" selection-start="562" selection-end="562" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlidePageFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="346" selection-end="346" vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
@@ -1366,11 +1387,6 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-nodpi/icon_incident.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="26" selection-start="2462" selection-end="2462" vertical-scroll-proportion="0.25" vertical-offset="629" max-vertical-offset="1905" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
@@ -1451,9 +1467,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlidePageFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="346" selection-end="346" vertical-scroll-proportion="0.12254902" vertical-offset="0" max-vertical-offset="960">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/ScreenSlideActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="134" column="22" selection-start="4413" selection-end="4413" vertical-scroll-proportion="2.6421568" vertical-offset="18" max-vertical-offset="1905">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/cognizant/gtoglass/activity/TargetFinderActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="208" column="0" selection-start="5594" selection-end="5594" vertical-scroll-proportion="0.28921568" vertical-offset="2508" max-vertical-offset="4980">
+        <state line="226" column="0" selection-start="6831" selection-end="6831" vertical-scroll-proportion="-0.04901961" vertical-offset="3420" max-vertical-offset="5415">
           <folding />
         </state>
       </provider>
