@@ -22,8 +22,17 @@ import com.cognizant.gtoglass.model.Target;
 import com.cognizant.gtoglass.util.MathUtils;
 import com.cognizant.gtoglass.view.Display;
 
-import java.util.List;
+import org.json.JSONException;
+import org.json.JSONObject;
 
+import java.net.MalformedURLException;
+import java.util.List;
+/*
+import io.socket.IOAcknowledge;
+import io.socket.IOCallback;
+import io.socket.SocketIO;
+import io.socket.SocketIOException;
+*/
 public class TargetFinderActivity extends Activity implements
         SensorEventListener, LocationListener {
 
@@ -67,6 +76,7 @@ public class TargetFinderActivity extends Activity implements
 
     private boolean mForeground;
 
+    //private SocketIO socket;
     public float getPitch() {
         return mPitch;
     }
@@ -76,6 +86,11 @@ public class TargetFinderActivity extends Activity implements
         Log.i(LOG_TAG, "onCreate");
         super.onCreate(savedInstanceState);
         Log.i(LOG_TAG, (String) this.getTitle());
+       /* try {
+            socket = new SocketIO("http://127.0.0.1:3001/");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }*/
 
         mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
@@ -91,15 +106,52 @@ public class TargetFinderActivity extends Activity implements
         });
         // TODO sort nearest first
         // TODO add cameras, shelters, etc..
-
+        //socketSetup();
         mTargetListIndex = getIntent().getIntExtra(TARGET_INDEX_EXTRA, mTargetListIndex);
 
         mTargets = Target.TARGET_LISTS.get(mTargetListIndex);
         mDisplay.showTarget(mTargets.get(mTargetIndex));
-
-
     }
+/*
+    public void socketSetup() {
+        socket.connect(new IOCallback() {
+            @Override
+            public void onMessage(JSONObject json, IOAcknowledge ack) {
+                try {
+                    System.out.println("Server said:" + json.toString(2));
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
 
+            @Override
+            public void onMessage(String data, IOAcknowledge ack) {
+                System.out.println("Server said: " + data);
+            }
+
+            @Override
+            public void onError(SocketIOException socketIOException) {
+                System.out.println("an Error occured");
+                socketIOException.printStackTrace();
+            }
+
+            @Override
+            public void onDisconnect() {
+                System.out.println("Connection terminated.");
+            }
+
+            @Override
+            public void onConnect() {
+                System.out.println("Connection established");
+            }
+
+            @Override
+            public void on(String event, IOAcknowledge ack, Object... args) {
+                System.out.println("Server triggered event '" + event + "'");
+            }
+        });
+    }
+*/
     @Override
     public void onDestroy() {
         mSpeech.shutdown();
@@ -148,9 +200,7 @@ public class TargetFinderActivity extends Activity implements
         mTargetIndex = (int) targetIndex;
         mDisplay.showTarget(mTargets.get(mTargetIndex));
         //if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
-
     }
-
 
     private void previousTarget() {
         Log.i(LOG_TAG, "previousTarget");
@@ -202,7 +252,9 @@ public class TargetFinderActivity extends Activity implements
 
             // Tapping views the camera.
             case KeyEvent.KEYCODE_DPAD_CENTER:
-                toggleShowUrl();
+                //toggleShowUrl();
+
+               // socket.send("Hello Server!"+mDisplay.target.url);
                 return true;
 
             case KeyEvent.KEYCODE_CAMERA:
@@ -213,6 +265,7 @@ public class TargetFinderActivity extends Activity implements
                 return super.dispatchKeyEvent(event);
         }
     }
+
 
     private void toggleShowUrl() {
         // If showing webview, hide it.

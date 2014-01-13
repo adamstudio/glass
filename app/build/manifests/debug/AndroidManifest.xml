@@ -18,17 +18,7 @@
         <uses-library android:name="com.google.android.glass" android:required="true"/>
         <!-- App activities -->
 
-        <activity android:label="@string/app_name" android:name="com.cognizant.gtoglass.activity.ScreenSlideActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.google.android.glass.action.VOICE_TRIGGER"/>
 
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
         <activity android:label="H1 Solutions" android:name="com.cognizant.gtoglass.activity.OneActivity">
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER"/>
@@ -60,13 +50,23 @@
 
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER"/>
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
 
             <meta-data android:name="com.google.android.glass.VoiceTrigger" android:resource="@xml/voice_trigger"/>
         </activity>
-        <activity android:label="GTO" android:name="com.cognizant.gtoglass.activity.TargetFinderActivity"/>
+        <activity android:label="List" android:name="com.cognizant.gtoglass.activity.ScreenSlideActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+        <intent-filter>
+            <action android:name="com.google.android.glass.action.VOICE_TRIGGER"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+        </intent-filter>
+        <meta-data android:name="com.google.android.glass.VoiceTrigger" android:resource="@xml/voice_trigger"/>
+    </activity>
+        <activity android:label="@string/app_name" android:name="com.cognizant.gtoglass.activity.TargetFinderActivity"/>
     </application>
 
 </manifest>

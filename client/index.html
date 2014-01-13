@@ -1,0 +1,16 @@
+<html> 
+<script src="http://localhost:3001/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect('http://localhost:3001');
+  var monitorid = 1; 
+  var url;
+  socket.on('news', function (data) {
+    if(monitorid == data.id){   
+  console.log(data);
+  window.open(data.url, "myNewPage"); 
+   }
+  }); 
+</script>
+<div id="mydiv"> 
+</div>
+</html>

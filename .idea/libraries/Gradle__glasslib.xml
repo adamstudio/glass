@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="Gradle: glasslib">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/app/libs/glasslib.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>
