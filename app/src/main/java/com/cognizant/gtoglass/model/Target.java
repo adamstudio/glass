@@ -12,7 +12,6 @@ public class Target {
 	
 	static {
 		TARGET_LISTS.add(TargetCameras.CAMERAS);
-		TARGET_LISTS.add(TargetCities.OTHER_CITIES);
 	}
 
 	public static String getImageUrlFromD2(final String url) {

@@ -19,7 +19,6 @@ import android.view.MotionEvent;
 
 import com.cognizant.gtoglass.R;
 import com.cognizant.gtoglass.model.Target;
-import com.cognizant.gtoglass.model.TargetCities;
 import com.cognizant.gtoglass.util.MathUtils;
 import com.cognizant.gtoglass.view.Display;
 
@@ -95,15 +94,14 @@ public class TargetFinderActivity extends Activity implements
 		// TODO add cameras, shelters, etc..
 
 		mTargetListIndex = getIntent().getIntExtra(TARGET_INDEX_EXTRA, 0);
-		if (mTargetListIndex <= 1) {
+		//if (mTargetListIndex <= 1) {
 			mTargets = Target.TARGET_LISTS.get(mTargetListIndex);
 			mDisplay.showTarget(mTargets.get(mTargetIndex));
-		}
+		//}
 
 		// XXX use default location as Palo Alto for now.
 		// This gets overridden by any last used location in onResume,
 		// and by any fresh locations.
-		mDisplay.setLocation(TargetCities.PALO_ALTO.asLocation());
 
 	}
 
@@ -152,13 +150,10 @@ public class TargetFinderActivity extends Activity implements
 	}
 
     private void gotoTarget(float targetIndex) {
-        if (mTargetListIndex <= 1) {
-        if(mTargetIndex!=(int) targetIndex){
             mTargetIndex = (int) targetIndex;
             mDisplay.showTarget(mTargets.get(mTargetIndex));
-            if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
-        }
-        }
+            //if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
+
     }
 
 
@@ -308,7 +303,7 @@ public class TargetFinderActivity extends Activity implements
             mHeading = MathUtils.mod(computeTrueNorth(magneticHeading), 360.0f)
                     - ARM_DISPLACEMENT_DEGREES;
             //Log.i(LOG_TAG, "direction  " + mHeading);
-            float mod =(mHeading/10);
+            float mod =(mHeading/36);
             gotoTarget( mod);
         }
 
