@@ -47,7 +47,7 @@ public class Display {
 
     private View rightIndicator;
 
-    private WebView view;
+    public WebView view;
 
     private TargetFinderActivity mActivity;
 

@@ -1,12 +1,15 @@
-<html> 
-<script src="http://localhost:3001/socket.io/socket.io.js"></script>
+<html>
+<script src="monitor.js"></script>
+<script src="http://10.237.77.163:9000/socket.io/socket.io.js"></script>
 <script>
-  var socket = io.connect('http://localhost:3001');
-  var monitorid = 1; 
+  var socket = io.connect('http://10.237.77.163:9000');
+
   var url;
   socket.on('news', function (data) {
-    if(monitorid == data.id){   
-  console.log(data);
+  console.log('direction' +data.id);
+    if(monitorid == data.id){
+  //console.log(data);
+  //http://10.237.77.163:9000/socket?url=http://www.facebook.com&id=3
   window.open(data.url, "myNewPage"); 
    }
   }); 

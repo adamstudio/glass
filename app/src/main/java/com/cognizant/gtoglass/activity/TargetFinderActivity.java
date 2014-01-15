@@ -27,12 +27,7 @@ import org.json.JSONObject;
 
 import java.net.MalformedURLException;
 import java.util.List;
-/*
-import io.socket.IOAcknowledge;
-import io.socket.IOCallback;
-import io.socket.SocketIO;
-import io.socket.SocketIOException;
-*/
+
 public class TargetFinderActivity extends Activity implements
         SensorEventListener, LocationListener {
 
@@ -76,7 +71,6 @@ public class TargetFinderActivity extends Activity implements
 
     private boolean mForeground;
 
-    //private SocketIO socket;
     public float getPitch() {
         return mPitch;
     }
@@ -86,12 +80,6 @@ public class TargetFinderActivity extends Activity implements
         Log.i(LOG_TAG, "onCreate");
         super.onCreate(savedInstanceState);
         Log.i(LOG_TAG, (String) this.getTitle());
-       /* try {
-            socket = new SocketIO("http://127.0.0.1:3001/");
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
-        }*/
-
         mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         // TODO supposed to be more accurate to compose compass and
@@ -106,52 +94,12 @@ public class TargetFinderActivity extends Activity implements
         });
         // TODO sort nearest first
         // TODO add cameras, shelters, etc..
-        //socketSetup();
         mTargetListIndex = getIntent().getIntExtra(TARGET_INDEX_EXTRA, mTargetListIndex);
 
         mTargets = Target.TARGET_LISTS.get(mTargetListIndex);
         mDisplay.showTarget(mTargets.get(mTargetIndex));
     }
-/*
-    public void socketSetup() {
-        socket.connect(new IOCallback() {
-            @Override
-            public void onMessage(JSONObject json, IOAcknowledge ack) {
-                try {
-                    System.out.println("Server said:" + json.toString(2));
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-            }
 
-            @Override
-            public void onMessage(String data, IOAcknowledge ack) {
-                System.out.println("Server said: " + data);
-            }
-
-            @Override
-            public void onError(SocketIOException socketIOException) {
-                System.out.println("an Error occured");
-                socketIOException.printStackTrace();
-            }
-
-            @Override
-            public void onDisconnect() {
-                System.out.println("Connection terminated.");
-            }
-
-            @Override
-            public void onConnect() {
-                System.out.println("Connection established");
-            }
-
-            @Override
-            public void on(String event, IOAcknowledge ack, Object... args) {
-                System.out.println("Server triggered event '" + event + "'");
-            }
-        });
-    }
-*/
     @Override
     public void onDestroy() {
         mSpeech.shutdown();
@@ -196,8 +144,8 @@ public class TargetFinderActivity extends Activity implements
         mDisplay.showTarget(mTargets.get(mTargetIndex));
     }
 
-    private void gotoTarget(float targetIndex) {
-        mTargetIndex = (int) targetIndex;
+    private void gotoTarget(int targetIndex) {
+        mTargetIndex = targetIndex;
         mDisplay.showTarget(mTargets.get(mTargetIndex));
         //if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
     }
@@ -228,9 +176,6 @@ public class TargetFinderActivity extends Activity implements
                 // If showing main AR screen on down swipe, leave program.
                 if (!mDisplay.isWebViewVisible()) {
                     finish();
-                    //Intent intent = new Intent(this, ScreenSlideActivity.class);
-                    //startActivity(intent);
-                    // If showing a camera, go back to AR screen.
                 } else {
                     mDisplay.hideDetailsView();
                 }
@@ -253,8 +198,7 @@ public class TargetFinderActivity extends Activity implements
             // Tapping views the camera.
             case KeyEvent.KEYCODE_DPAD_CENTER:
                 //toggleShowUrl();
-
-               // socket.send("Hello Server!"+mDisplay.target.url);
+                if(mTargetIndex<5) mDisplay.view.loadUrl("http://10.237.77.163:9000/socket?url="+mDisplay.target.url+"&id="+mTargetIndex);
                 return true;
 
             case KeyEvent.KEYCODE_CAMERA:
@@ -354,8 +298,11 @@ public class TargetFinderActivity extends Activity implements
             mHeading = MathUtils.mod(computeTrueNorth(magneticHeading), 360.0f)
                     - ARM_DISPLACEMENT_DEGREES;
             //Log.i(LOG_TAG, "direction  " + mHeading);
-            float mod = (mHeading / 36);
-            gotoTarget(mod);
+            int mod = (int)(mHeading / 36);
+            if(mTargetIndex!=mod ){
+                Log.i(LOG_TAG, "direction  " + mod);
+                gotoTarget(mod);
+            }
         }
 
         float azimuth_angle = event.values[0];
