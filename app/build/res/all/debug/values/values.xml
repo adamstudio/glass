@@ -68,6 +68,9 @@
     <string name="geolocation">GeoLocation</string>
     <string name="glass_voice_prompt">GTO</string>
     <string name="glass_voice_trigger">Show Lab</string>
+    <string name="h1">H1 Solutions</string>
+    <string name="h2">H2 Solutions</string>
+    <string name="h3">H3 Solutions</string>
     <string name="hello_world">Hello world!</string>
     <string name="read_aloud">Read aloud</string>
     <string name="show_compass_voice_trigger">show a compass</string>
@@ -75,6 +78,7 @@
     <string name="title_activity_compass_menu">CompassMenu</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_pan">PanActivity</string>
+    <string name="venture">Venture Idea</string>
     <!-- From: file:/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/styles.xml -->
     <eat-comment />
 

@@ -6,7 +6,7 @@ import android.graphics.drawable.Drawable;
 import android.util.AttributeSet;
 import android.view.View;
 
-import com.cognizant.gtoglass.R;
+import com.cognizant.gtoglass.activity.R;
 
 public class OffsetIndicatorView extends View {
 

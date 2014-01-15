@@ -10,8 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.cognizant.gtoglass.R;
-
 public class ScreenSlidePageFragment extends Fragment {
 
     public static final String ARG_PAGE = "page";

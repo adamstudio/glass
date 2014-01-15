@@ -17,15 +17,10 @@ import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 
-import com.cognizant.gtoglass.R;
 import com.cognizant.gtoglass.model.Target;
 import com.cognizant.gtoglass.util.MathUtils;
 import com.cognizant.gtoglass.view.Display;
 
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.net.MalformedURLException;
 import java.util.List;
 
 public class TargetFinderActivity extends Activity implements
@@ -146,7 +141,7 @@ public class TargetFinderActivity extends Activity implements
 
     private void gotoTarget(int targetIndex) {
         mTargetIndex = targetIndex;
-        mDisplay.showTarget(mTargets.get(mTargetIndex));
+       if(mTargetIndex<5) mDisplay.showTarget(mTargets.get(mTargetIndex));
         //if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
     }
 
@@ -186,7 +181,7 @@ public class TargetFinderActivity extends Activity implements
             case KeyEvent.KEYCODE_TAB:
             case KeyEvent.KEYCODE_VOLUME_UP:
             /*if (event.isShiftPressed()) {
-				previousTarget();
+                previousTarget();
 			} else {
 				nextTarget();
 			}*/
@@ -198,7 +193,8 @@ public class TargetFinderActivity extends Activity implements
             // Tapping views the camera.
             case KeyEvent.KEYCODE_DPAD_CENTER:
                 //toggleShowUrl();
-                if(mTargetIndex<5) mDisplay.view.loadUrl("http://10.237.77.163:9000/socket?url="+mDisplay.target.url+"&id="+mTargetIndex);
+                if (mTargetIndex < 5)
+                    mDisplay.view.loadUrl("http://10.237.77.163:9000/socket?url=" + mDisplay.target.url + "&id=" + mTargetIndex);
                 return true;
 
             case KeyEvent.KEYCODE_CAMERA:
@@ -298,8 +294,8 @@ public class TargetFinderActivity extends Activity implements
             mHeading = MathUtils.mod(computeTrueNorth(magneticHeading), 360.0f)
                     - ARM_DISPLACEMENT_DEGREES;
             //Log.i(LOG_TAG, "direction  " + mHeading);
-            int mod = (int)(mHeading / 36);
-            if(mTargetIndex!=mod ){
+            int mod = (int) (mHeading / 36);
+            if (mTargetIndex != mod) {
                 Log.i(LOG_TAG, "direction  " + mod);
                 gotoTarget(mod);
             }

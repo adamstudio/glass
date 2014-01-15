@@ -1,6 +1,6 @@
 package com.cognizant.gtoglass.model;
 
-import com.cognizant.gtoglass.R;
+import com.cognizant.gtoglass.activity.R;
 
 import java.util.LinkedList;
 import java.util.List;

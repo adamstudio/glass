@@ -84,11 +84,6 @@
                 qualifiers=""
                 type="layout" />
             <file
-                name="main"
-                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/menu/main.xml"
-                qualifiers=""
-                type="menu" />
-            <file
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/attrs.xml"
                 qualifiers="" >
                 <declare-styleable name="ButtonBarContainerTheme" >
@@ -119,6 +114,10 @@
             <file
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/strings.xml"
                 qualifiers="" >
+                <string name="venture" >Venture Idea
+                </string>
+                <string name="h1" >H1 Solutions
+                </string>
                 <string name="glass_voice_prompt" >GTO
                 </string>
                 <string name="action_settings" >Settings
@@ -237,6 +236,10 @@ NNW
                     </item>
                 </string-array>
 
+                <string name="h2" >H2 Solutions
+                </string>
+                <string name="h3" >H3 Solutions
+                </string>
                 <string name="app_name" >GTO Glassware
                 </string>
                 <string name="dummy_content" >DUMMY\nCONTENT

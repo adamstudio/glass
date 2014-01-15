@@ -18,8 +18,6 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 
-import com.cognizant.gtoglass.R;
-
 public class ScreenSlideActivity extends FragmentActivity {
 
     // TODO icons for menu items

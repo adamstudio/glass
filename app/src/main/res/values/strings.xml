@@ -3,6 +3,10 @@
 
     <string name="app_name">GTO Glassware</string>
     <string name="glass_voice_trigger">Show Lab</string>
+    <string name="h1">H1 Solutions</string>
+    <string name="h2">H2 Solutions</string>
+    <string name="h3">H3 Solutions</string>
+    <string name="venture">Venture Idea</string>
     <string name="glass_voice_prompt">GTO</string>
     <string name="title_activity_pan">PanActivity</string>
     <string name="dummy_button">Dummy Button</string>

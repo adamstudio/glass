@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.cognizant.gtoglass"
+    package="com.cognizant.gtoglass.activity"
     android:versionCode="2"
     android:versionName="1.0">
 
@@ -32,7 +32,7 @@
 
 
         <activity
-            android:name="com.cognizant.gtoglass.activity.OneActivity"
+            android:name=".OneActivity"
             android:label="H1 Solutions">
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
@@ -44,7 +44,7 @@
                 android:resource="@xml/voice_trigger" />
         </activity>
         <activity
-            android:name="com.cognizant.gtoglass.activity.TwoActivity"
+            android:name=".TwoActivity"
             android:label="H2 Solutions">
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
@@ -57,7 +57,7 @@
                 android:resource="@xml/voice_trigger" />
         </activity>
         <activity
-            android:name="com.cognizant.gtoglass.activity.ThreeActivity"
+            android:name=".ThreeActivity"
             android:label="H3 Solutions">
 
             <intent-filter>
@@ -71,7 +71,7 @@
                 android:resource="@xml/voice_trigger" />
         </activity>
         <activity
-            android:name="com.cognizant.gtoglass.activity.FourActivity"
+            android:name=".FourActivity"
             android:label="Venture Ideas">
 
             <intent-filter>
@@ -84,23 +84,24 @@
                 android:resource="@xml/voice_trigger" />
         </activity>
         <activity
-        android:name="com.cognizant.gtoglass.activity.ScreenSlideActivity"
-        android:label="List">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        <intent-filter>
-            <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        <meta-data
-            android:name="com.google.android.glass.VoiceTrigger"
-            android:resource="@xml/voice_trigger" />
-    </activity>
+            android:name=".ScreenSlideActivity"
+            android:label="List">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/voice_trigger" />
+        </activity>
         <activity
-            android:name="com.cognizant.gtoglass.activity.TargetFinderActivity"
+            android:name=".TargetFinderActivity"
             android:label="@string/app_name" />
     </application>
+
 
 </manifest>

@@ -11,7 +11,7 @@ import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.cognizant.gtoglass.R;
+import com.cognizant.gtoglass.activity.R;
 import com.cognizant.gtoglass.activity.TargetFinderActivity;
 import com.cognizant.gtoglass.model.Target;
 
@@ -193,7 +193,7 @@ public class Display {
         float delta = normalize(bearingToAsEastOfNorthDegrees - azimuth);
         // Do something with these orientation angles.
         /*
-		text.setText(
+        text.setText(
 				  "a = " + azimuth + "\n"
 				+ "p = " + pitch + "\n" 
 				+ "r = " + roll + "\n" 
