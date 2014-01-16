@@ -17,7 +17,6 @@ import com.cognizant.gtoglass.model.Target;
 
 public class Display {
 
-    // TODO show page turn in corner if have camera image, etc.
 
     private static final String LOG_TAG = "GTOGlass";
 

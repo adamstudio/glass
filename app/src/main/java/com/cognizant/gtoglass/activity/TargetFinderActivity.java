@@ -1,8 +1,10 @@
 package com.cognizant.gtoglass.activity;
 
 import android.app.Activity;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.hardware.GeomagneticField;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -12,14 +14,20 @@ import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
-import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
+import android.widget.Toast;
 
+import com.cognizant.gtoglass.activity.R;
 import com.cognizant.gtoglass.model.Target;
 import com.cognizant.gtoglass.util.MathUtils;
 import com.cognizant.gtoglass.view.Display;
+import com.google.android.glass.touchpad.Gesture;
+import com.google.android.glass.touchpad.GestureDetector;
 
 import java.util.List;
 
@@ -52,11 +60,11 @@ public class TargetFinderActivity extends Activity implements
     private static final int ARM_DISPLACEMENT_DEGREES = 6;
 
     private GeomagneticField mGeomagneticField;
-    private Sensor mOrientation;
     private float mPitch;
     private LocationManager mLocationManager;
 
     private Display mDisplay;
+    private GestureDetector mGestureDetector;
 
     private List<Target> mTargets;
 
@@ -77,9 +85,7 @@ public class TargetFinderActivity extends Activity implements
         Log.i(LOG_TAG, (String) this.getTitle());
         mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-        // TODO supposed to be more accurate to compose compass and
-        // accelerometer yourself
-        mOrientation = mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
+
         mDisplay = new Display(this);
         mSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
             @Override
@@ -87,12 +93,12 @@ public class TargetFinderActivity extends Activity implements
                 // Do nothing.
             }
         });
-        // TODO sort nearest first
-        // TODO add cameras, shelters, etc..
         mTargetListIndex = getIntent().getIntExtra(TARGET_INDEX_EXTRA, mTargetListIndex);
 
         mTargets = Target.TARGET_LISTS.get(mTargetListIndex);
         mDisplay.showTarget(mTargets.get(mTargetIndex));
+        mGestureDetector = createGestureDetector(this);
+
     }
 
     @Override
@@ -106,6 +112,34 @@ public class TargetFinderActivity extends Activity implements
         Log.i(LOG_TAG, "onTouchEvent, event = " + event);
         return super.onTouchEvent(event);
     }
+    @Override
+    public void onBackPressed() {
+        Log.d("Gesture ", "onBackPressed");
+        //Toast.makeText(getApplicationContext(), "Go Back", Toast.LENGTH_SHORT).show();
+        this.openOptionsMenu();
+
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.list:
+                Intent intent = new Intent(this, ScreenSlideActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.stop:
+                finish();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
 
     @Override
     public boolean dispatchTouchEvent(MotionEvent ev) {
@@ -141,7 +175,7 @@ public class TargetFinderActivity extends Activity implements
 
     private void gotoTarget(int targetIndex) {
         mTargetIndex = targetIndex;
-       if(mTargetIndex<5) mDisplay.showTarget(mTargets.get(mTargetIndex));
+        if (mTargetIndex < 5) mDisplay.showTarget(mTargets.get(mTargetIndex));
         //if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
     }
 
@@ -155,55 +189,21 @@ public class TargetFinderActivity extends Activity implements
         mDisplay.showTarget(mTargets.get(mTargetIndex));
     }
 
-    @Override
-    public boolean dispatchKeyEvent(final KeyEvent event) {
-        Log.i(LOG_TAG, "dispatchKeyEvent, event = " + event);
-
-        final int action = event.getAction();
-        if (action != KeyEvent.ACTION_DOWN) {
-            return false;
-        }
-
-        final int keyCode = event.getKeyCode();
-        switch (keyCode) {
-            // Back button on standard Android, swipe down on Google Glass
-            case KeyEvent.KEYCODE_BACK:
-                // If showing main AR screen on down swipe, leave program.
-                if (!mDisplay.isWebViewVisible()) {
-                    finish();
-                } else {
-                    mDisplay.hideDetailsView();
+    private GestureDetector createGestureDetector(Context context) {
+        GestureDetector gestureDetector = new GestureDetector(context);
+        gestureDetector.setBaseListener(new GestureDetector.BaseListener() {
+            @Override
+            public boolean onGesture(Gesture gesture) {
+                if (gesture == Gesture.TAP) {
+                    Log.i(LOG_TAG, " Target" + mTargetIndex);
+                    if (mTargetIndex < 5)
+                        mDisplay.view.loadUrl("http://10.237.77.163:9000/socket?url=" + mDisplay.target.url + "&id=" + mTargetIndex);
+                    return true;
                 }
-                return true;
-
-            // Left and right swipe through the cameras on Google Glass.
-            // On phone, volume keys move through cameras
-            case KeyEvent.KEYCODE_TAB:
-            case KeyEvent.KEYCODE_VOLUME_UP:
-            /*if (event.isShiftPressed()) {
-                previousTarget();
-			} else {
-				nextTarget();
-			}*/
-                return true;
-            case KeyEvent.KEYCODE_VOLUME_DOWN:
-                //previousTarget();
-                return true;
-
-            // Tapping views the camera.
-            case KeyEvent.KEYCODE_DPAD_CENTER:
-                //toggleShowUrl();
-                if (mTargetIndex < 5)
-                    mDisplay.view.loadUrl("http://10.237.77.163:9000/socket?url=" + mDisplay.target.url + "&id=" + mTargetIndex);
-                return true;
-
-            case KeyEvent.KEYCODE_CAMERA:
-                Intent intent = new Intent(this, ScreenSlideActivity.class);
-                startActivity(intent);
-                return true;
-            default:
-                return super.dispatchKeyEvent(event);
-        }
+                return false;
+            }
+        });
+        return gestureDetector;
     }
 
 
@@ -217,6 +217,7 @@ public class TargetFinderActivity extends Activity implements
             showUrl();
         }
     }
+
 
     @Override
     public void onAccuracyChanged(final Sensor sensor, final int accuracy) {
@@ -238,12 +239,9 @@ public class TargetFinderActivity extends Activity implements
                 mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),
                 SensorManager.SENSOR_DELAY_UI);
 
-        mSensorManager.registerListener(this, mOrientation,
-                SensorManager.SENSOR_DELAY_NORMAL);
         final List<String> providers = mLocationManager.getAllProviders();
         for (String provider : providers) {
             // Set last known location if we have it.
-            // TODO indicate to user if very out of date?
             // Time label in corner? some sort of scanner ping lines moving
             // outward?
             final Location lastKnownLocation = mLocationManager
@@ -325,7 +323,6 @@ public class TargetFinderActivity extends Activity implements
     @Override
     public void onProviderDisabled(final String provider) {
         // Log.i(LOG_TAG, "onProviderDisabled");
-        // TODO warn user if no providers enabled
     }
 
     @Override

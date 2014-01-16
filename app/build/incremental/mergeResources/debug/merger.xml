@@ -69,20 +69,20 @@
                 qualifiers=""
                 type="layout" />
             <file
-                name="activity_mainact"
-                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/activity_mainact.xml"
-                qualifiers=""
-                type="layout" />
-            <file
                 name="activity_screen_slide"
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/activity_screen_slide.xml"
                 qualifiers=""
                 type="layout" />
             <file
-                name="fragment_screen_slide_page"
-                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/fragment_screen_slide_page.xml"
+                name="card_text"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/card_text.xml"
                 qualifiers=""
                 type="layout" />
+            <file
+                name="menu"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/menu/menu.xml"
+                qualifiers=""
+                type="menu" />
             <file
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/attrs.xml"
                 qualifiers="" >
@@ -118,9 +118,9 @@
                 </string>
                 <string name="h1" >H1 Solutions
                 </string>
-                <string name="glass_voice_prompt" >GTO
-                </string>
                 <string name="action_settings" >Settings
+                </string>
+                <string name="glass_voice_prompt" >GTO
                 </string>
                 <string name="title_activity_main" >MainActivity
                 </string>
@@ -133,6 +133,8 @@
                 <string name="title_activity_compass_menu" >CompassMenu
                 </string>
                 <string name="dummy_button" >Dummy Button
+                </string>
+                <string name="h2" >H2 Solutions
                 </string>
 
                 <string-array name="spoken_directions" >
@@ -236,8 +238,6 @@ NNW
                     </item>
                 </string-array>
 
-                <string name="h2" >H2 Solutions
-                </string>
                 <string name="h3" >H3 Solutions
                 </string>
                 <string name="app_name" >GTO Glassware
@@ -248,7 +248,7 @@ NNW
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
-                <string name="read_aloud" >Read aloud
+                <string name="list" >GTO Solutions
                 </string>
                 <string name="accelerometer" >Accelerometer
                 </string>
@@ -381,6 +381,11 @@ true
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/xml/voice_trigger.xml"
                 qualifiers=""
                 type="xml" />
+            <file
+                name="fragment_screen_slide_page"
+                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/fragment_screen_slide_page.xml"
+                qualifiers=""
+                type="layout" />
         </source>
         <source path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/build/res/rs/debug" />
     </dataSet>

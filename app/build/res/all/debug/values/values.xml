@@ -72,7 +72,7 @@
     <string name="h2">H2 Solutions</string>
     <string name="h3">H3 Solutions</string>
     <string name="hello_world">Hello world!</string>
-    <string name="read_aloud">Read aloud</string>
+    <string name="list">GTO Solutions</string>
     <string name="show_compass_voice_trigger">show a compass</string>
     <string name="stop">Stop</string>
     <string name="title_activity_compass_menu">CompassMenu</string>

@@ -45,34 +45,30 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int marker_shelter=0x7f02000b;
     }
     public static final class id {
-        public static final int accelX=0x7f0a0009;
-        public static final int accelY=0x7f0a000a;
-        public static final int accelZ=0x7f0a000b;
-        public static final int content=0x7f0a0014;
-        public static final int description=0x7f0a0008;
-        public static final int diffX=0x7f0a000c;
-        public static final int diffY=0x7f0a000d;
-        public static final int diffZ=0x7f0a000e;
-        public static final int frame=0x7f0a0000;
-        public static final int geoAlt=0x7f0a0011;
-        public static final int geoBear=0x7f0a0012;
-        public static final int geoLat=0x7f0a000f;
-        public static final int geoLong=0x7f0a0010;
-        public static final int image1=0x7f0a0015;
-        public static final int indicator=0x7f0a0001;
-        public static final int indicator_web=0x7f0a0002;
-        public static final int leftIndicator=0x7f0a0003;
-        public static final int location=0x7f0a0005;
-        public static final int pager=0x7f0a0013;
-        public static final int rightIndicator=0x7f0a0004;
-        public static final int text=0x7f0a0006;
-        public static final int web=0x7f0a0007;
+        public static final int content=0x7f0b000b;
+        public static final int description=0x7f0b0008;
+        public static final int frame=0x7f0b0000;
+        public static final int image1=0x7f0b000c;
+        public static final int indicator=0x7f0b0001;
+        public static final int indicator_web=0x7f0b0002;
+        public static final int leftIndicator=0x7f0b0003;
+        public static final int list=0x7f0b000d;
+        public static final int location=0x7f0b0005;
+        public static final int main_text=0x7f0b000a;
+        public static final int pager=0x7f0b0009;
+        public static final int rightIndicator=0x7f0b0004;
+        public static final int stop=0x7f0b000e;
+        public static final int text=0x7f0b0006;
+        public static final int web=0x7f0b0007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int activity_mainact=0x7f030001;
-        public static final int activity_screen_slide=0x7f030002;
+        public static final int activity_screen_slide=0x7f030001;
+        public static final int card_text=0x7f030002;
         public static final int fragment_screen_slide_page=0x7f030003;
+    }
+    public static final class menu {
+        public static final int menu=0x7f0a0000;
     }
     public static final class string {
         public static final int accelerometer=0x7f080000;
@@ -87,7 +83,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int h2=0x7f080009;
         public static final int h3=0x7f08000a;
         public static final int hello_world=0x7f08000b;
-        public static final int read_aloud=0x7f08000c;
+        public static final int list=0x7f08000c;
         public static final int show_compass_voice_trigger=0x7f08000d;
         public static final int stop=0x7f08000e;
         public static final int title_activity_compass_menu=0x7f08000f;
