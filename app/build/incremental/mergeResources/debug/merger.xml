@@ -137,60 +137,6 @@
                 <string name="dummy_button" >Dummy Button
                 </string>
 
-                <string-array name="spoken_directions" >
-                    <item>
-north
-                    </item>
-                    <item>
-north north east
-                    </item>
-                    <item>
-north east
-                    </item>
-                    <item>
-east north east
-                    </item>
-                    <item>
-east
-                    </item>
-                    <item>
-east south east
-                    </item>
-                    <item>
-south east
-                    </item>
-                    <item>
-south south east
-                    </item>
-                    <item>
-south
-                    </item>
-                    <item>
-south south west
-                    </item>
-                    <item>
-south west
-                    </item>
-                    <item>
-west south west
-                    </item>
-                    <item>
-west
-                    </item>
-                    <item>
-west north west
-                    </item>
-                    <item>
-north west
-                    </item>
-                    <item>
-north north west
-                    </item>
-                </string-array>
-
-                <string name="h2" >H2 Solutions
-                </string>
-
                 <string-array name="direction_abbreviations" >
                     <item>
 N
@@ -242,6 +188,60 @@ NNW
                     </item>
                 </string-array>
 
+                <string name="h2" >H2 Solutions
+                </string>
+
+                <string-array name="spoken_directions" >
+                    <item>
+north
+                    </item>
+                    <item>
+north north east
+                    </item>
+                    <item>
+north east
+                    </item>
+                    <item>
+east north east
+                    </item>
+                    <item>
+east
+                    </item>
+                    <item>
+east south east
+                    </item>
+                    <item>
+south east
+                    </item>
+                    <item>
+south south east
+                    </item>
+                    <item>
+south
+                    </item>
+                    <item>
+south south west
+                    </item>
+                    <item>
+south west
+                    </item>
+                    <item>
+west south west
+                    </item>
+                    <item>
+west
+                    </item>
+                    <item>
+west north west
+                    </item>
+                    <item>
+north west
+                    </item>
+                    <item>
+north north west
+                    </item>
+                </string-array>
+
                 <string name="h3" >H3 Solutions
                 </string>
                 <string name="app_name" >GTO Glassware
@@ -252,9 +252,9 @@ NNW
                 </string>
                 <string name="hello_world" >Hello world!
                 </string>
-                <string name="list" >GTO Solutions
-                </string>
                 <string name="accelerometer" >Accelerometer
+                </string>
+                <string name="list" >GTO Solutions
                 </string>
                 <string name="glass_voice_trigger" >Show Lab
                 </string>
@@ -367,11 +367,6 @@ true
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/xml/voice_trigger.xml"
                 qualifiers=""
                 type="xml" />
-            <file
-                name="fragment_screen_slide_page"
-                path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/layout/fragment_screen_slide_page.xml"
-                qualifiers=""
-                type="layout" />
         </source>
         <source path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/build/res/rs/debug" />
     </dataSet>

@@ -45,14 +45,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int marker_shelter=0x7f02000b;
     }
     public static final class id {
-        public static final int camera=0x7f0b0011;
-        public static final int content=0x7f0b000b;
+        public static final int camera=0x7f0b000f;
         public static final int description=0x7f0b0008;
         public static final int frame=0x7f0b0000;
-        public static final int h1=0x7f0b000d;
-        public static final int h2=0x7f0b000e;
-        public static final int h3=0x7f0b000f;
-        public static final int image1=0x7f0b000c;
+        public static final int h1=0x7f0b000b;
+        public static final int h2=0x7f0b000c;
+        public static final int h3=0x7f0b000d;
         public static final int indicator=0x7f0b0001;
         public static final int indicator_web=0x7f0b0002;
         public static final int leftIndicator=0x7f0b0003;
@@ -61,14 +59,13 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int pager=0x7f0b0009;
         public static final int rightIndicator=0x7f0b0004;
         public static final int text=0x7f0b0006;
-        public static final int venture=0x7f0b0010;
+        public static final int venture=0x7f0b000e;
         public static final int web=0x7f0b0007;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int activity_screen_slide=0x7f030001;
         public static final int card_text=0x7f030002;
-        public static final int fragment_screen_slide_page=0x7f030003;
     }
     public static final class menu {
         public static final int menu=0x7f0a0000;

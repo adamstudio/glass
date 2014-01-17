@@ -3,15 +3,21 @@ package com.cognizant.gtoglass.activity;
 /**
  * Created by devarajns on 17/01/14.
  */
-
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.FileObserver;
+import android.os.Handler;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.MotionEvent;
 
@@ -19,10 +25,18 @@ import com.cognizant.gtoglass.view.CameraView;
 import com.google.android.glass.media.CameraManager;
 import com.google.android.glass.touchpad.Gesture;
 import com.google.android.glass.touchpad.GestureDetector;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.FileAsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
+
+import org.apache.http.Header;
 
 
 public class CameraActivity extends Activity
 {
+
+    public static final String LOG_TAG = "GTOGlass";
     private static final int TAKE_PICTURE_REQUEST = 1;
     private static final int TAKE_VIDEO_REQUEST = 2;
     private GestureDetector mGestureDetector = null;
@@ -82,6 +96,73 @@ public class CameraActivity extends Activity
         }
     }
 
+    private void postImage(File file) {
+        Log.i(LOG_TAG, "upload" + file.exists() + " " + file.length());
+        RequestParams params = new RequestParams();
+        try {
+            params.put("file", file);
+        } catch (FileNotFoundException e) {
+            Log.i(LOG_TAG, "error");
+        }
+        AsyncHttpClient client = new AsyncHttpClient();
+        client.post("http://10.232.58.26:9000/images", params, getResponseHandler());
+    }
+
+    protected AsyncHttpResponseHandler getResponseHandler() {
+        return new FileAsyncHttpResponseHandler(this) {
+            @Override
+            public void onStart() {
+                Log.i(LOG_TAG, "start");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, File response) {
+                Log.i(LOG_TAG, "success"+response.length());
+                FileInputStream inputStream = null;
+                try {
+                    inputStream = new FileInputStream(response.getAbsolutePath());
+                    BufferedReader r = new BufferedReader(new InputStreamReader(inputStream));
+                    StringBuilder total = new StringBuilder();
+                    String line;
+                    try {
+                        while ((line = r.readLine()) != null) {
+                            total.append(line);
+                        }
+                        Log.i(LOG_TAG,"total:"+total);
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }      finally {
+                    try {
+                        inputStream.close();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                debugFile(response);
+            }
+
+            @Override
+            public void onFailure(int statusCode, Header[] headers, Throwable throwable, File file) {
+                Log.i(LOG_TAG, "fail" +throwable.getMessage());
+                debugFile(file);
+            }
+
+            private void debugFile(File file) {
+                if (file == null || !file.exists()) {
+                    Log.i(LOG_TAG, "Response is null");
+                    return;
+                }
+                try {
+                    Log.i(LOG_TAG, file.getAbsolutePath() + "\r\n\r\n");
+                } catch (Throwable t) {
+                    Log.i(LOG_TAG, "Cannot debug file contents", t);
+                }
+            }
+        };
+    }
     /**
      * Gesture detection for fingers on the Glass
      * @param context
@@ -107,17 +188,6 @@ public class CameraActivity extends Activity
                         if (intent != null)
                         {
                             startActivityForResult(intent, TAKE_PICTURE_REQUEST);
-                        }
-
-                        return true;
-                    }
-                    // Tap with 2 fingers for video
-                    else if (gesture == Gesture.TWO_TAP)
-                    {
-                        Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
-                        if (intent != null)
-                        {
-                            startActivityForResult(intent, TAKE_VIDEO_REQUEST);
                         }
 
                         return true;
@@ -156,16 +226,24 @@ public class CameraActivity extends Activity
         if (requestCode == TAKE_PICTURE_REQUEST && resultCode == RESULT_OK)
         {
             String picturePath = data.getStringExtra(CameraManager.EXTRA_PICTURE_FILE_PATH);
-            processPictureWhenReady(picturePath);
-        }
+           // processPictureWhenReady(picturePath);
+            final File pictureFile = new File(picturePath);
+            final Handler handler = new Handler();
+            Thread th = new Thread() {
+                public void run() {
+                    if(pictureFile.exists()){
+                        Log.i(LOG_TAG, pictureFile.length()+" here "+pictureFile.getAbsolutePath());
+                        postImage(pictureFile);
+                    handler.removeCallbacks(this);
+                    }else{
 
-        // Handle videos
-        if (requestCode == TAKE_VIDEO_REQUEST && resultCode == RESULT_OK)
-        {
-            String picturePath = data.getStringExtra(CameraManager.EXTRA_VIDEO_FILE_PATH);
-            processPictureWhenReady(picturePath);
+                        Log.i(LOG_TAG, pictureFile.length()+" not here "+pictureFile.getAbsolutePath());
+                    handler.postDelayed(this, 2000);
+                    }
+                }
+            };
+            th.start();
         }
-
         super.onActivityResult(requestCode, resultCode, data);
     }
 
@@ -208,7 +286,8 @@ public class CameraActivity extends Activity
                         if (isFileWritten)
                         {
                             stopWatching();
-
+                            Log.i(LOG_TAG, pictureFile.length()+" here "+pictureFile.getAbsolutePath());
+                            postImage(pictureFile);
                             // Now that the file is ready, recursively call
                             // processPictureWhenReady again (on the UI thread).
                             runOnUiThread(new Runnable()
@@ -230,10 +309,10 @@ public class CameraActivity extends Activity
     /**
      * Added but irrelevant
      */
-	/*
-	 * (non-Javadoc)
-	 * @see android.app.Activity#onKeyDown(int, android.view.KeyEvent)
-	 */
+        /*
+         * (non-Javadoc)
+         * @see android.app.Activity#onKeyDown(int, android.view.KeyEvent)
+         */
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event)
     {

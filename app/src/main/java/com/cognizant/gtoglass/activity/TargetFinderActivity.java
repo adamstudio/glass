@@ -31,7 +31,7 @@ import com.google.android.glass.touchpad.GestureDetector;
 import java.util.List;
 
 public class TargetFinderActivity extends Activity implements
-        SensorEventListener, LocationListener {
+        SensorEventListener {
 
 
     private final float[] mRotationMatrix = new float[16];
@@ -60,8 +60,6 @@ public class TargetFinderActivity extends Activity implements
 
     private GeomagneticField mGeomagneticField;
     private float mPitch;
-    private LocationManager mLocationManager;
-
     private Display mDisplay;
     private GestureDetector mGestureDetector;
 
@@ -79,10 +77,9 @@ public class TargetFinderActivity extends Activity implements
 
     @Override
     public void onCreate(final Bundle savedInstanceState) {
-        Log.i(LOG_TAG, "onCreate");
+        Log.i(LOG_TAG, "onCreate"+mTargetListIndex);
         super.onCreate(savedInstanceState);
         Log.i(LOG_TAG, (String) this.getTitle());
-        mLocationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
         mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 
         mDisplay = new Display(this);
@@ -226,23 +223,6 @@ public class TargetFinderActivity extends Activity implements
         mSensorManager.registerListener(this,
                 mSensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD),
                 SensorManager.SENSOR_DELAY_UI);
-
-        final List<String> providers = mLocationManager.getAllProviders();
-        for (String provider : providers) {
-            // Set last known location if we have it.
-            // Time label in corner? some sort of scanner ping lines moving
-            // outward?
-            final Location lastKnownLocation = mLocationManager
-                    .getLastKnownLocation(provider);
-            mDisplay.setLocation(lastKnownLocation);
-
-            final boolean enabled = mLocationManager
-                    .isProviderEnabled(provider);
-            Log.i(LOG_TAG, "Found provider: " + provider + ", enabled = "
-                    + enabled);
-            mLocationManager.requestLocationUpdates(provider, 0, 0, this);
-        }
-
         mForeground = true;
 
     }
@@ -253,7 +233,6 @@ public class TargetFinderActivity extends Activity implements
         mForeground = false;
         super.onPause();
         mSensorManager.unregisterListener(this);
-        mLocationManager.removeUpdates(this);
     }
 
     public float getHeading() {
@@ -299,39 +278,6 @@ public class TargetFinderActivity extends Activity implements
         } else {
             return heading;
         }
-    }
-
-    @Override
-    public void onLocationChanged(final Location location) {
-        // Log.i(LOG_TAG, "onLocationChanged");
-
-        mDisplay.setLocation(location);
-    }
-
-    @Override
-    public void onProviderDisabled(final String provider) {
-        // Log.i(LOG_TAG, "onProviderDisabled");
-    }
-
-    @Override
-    public void onProviderEnabled(final String provider) {
-        // Log.i(LOG_TAG, "onProviderEnabled");
-    }
-
-    @Override
-    public void onStatusChanged(final String provider, final int status,
-                                final Bundle extras) {
-        // Log.i(LOG_TAG, "onStatusChanged");
-    }
-
-    public static double microDegreesToDegrees(int microDegrees) {
-        return microDegrees / 1E6;
-    }
-
-
-    @Override
-    protected void onStop() {
-        super.onStop();
     }
 
 }
