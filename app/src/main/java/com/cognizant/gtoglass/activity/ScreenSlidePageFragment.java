@@ -54,7 +54,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
             @Override
             public void onClick(View v) {
-                ((ScreenSlideActivity) getActivity()).select();
+                //((ScreenSlideActivity) getActivity()).select();
             }
         });
 

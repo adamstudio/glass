@@ -114,7 +114,7 @@
             <file
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/strings.xml"
                 qualifiers="" >
-                <string name="venture" >Venture Idea
+                <string name="venture" >Venture Ideas
                 </string>
                 <string name="h1" >H1 Solutions
                 </string>
@@ -123,6 +123,8 @@
                 <string name="glass_voice_prompt" >GTO
                 </string>
                 <string name="title_activity_main" >MainActivity
+                </string>
+                <string name="camera" >Camera
                 </string>
                 <string name="title_activity_pan" >PanActivity
                 </string>
@@ -133,8 +135,6 @@
                 <string name="title_activity_compass_menu" >CompassMenu
                 </string>
                 <string name="dummy_button" >Dummy Button
-                </string>
-                <string name="h2" >H2 Solutions
                 </string>
 
                 <string-array name="spoken_directions" >
@@ -187,6 +187,10 @@ north west
 north north west
                     </item>
                 </string-array>
+
+                <string name="h2" >H2 Solutions
+                </string>
+
                 <string-array name="direction_abbreviations" >
                     <item>
 N
@@ -259,17 +263,6 @@ NNW
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values/styles.xml"
                 qualifiers="" >
 
-                <style
-                    name="AppBaseTheme"
-                    parent="android:Theme.Light" >
-
-                    <!--
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-                    -->
-                </style>
-
                 <style name="ButtonBar" >
                     <item name="android:paddingLeft">
 2dp
@@ -306,13 +299,6 @@ NNW
                 </style>
 
                 <style name="ButtonBarButton" />
-
-                <style
-                    name="AppTheme"
-                    parent="AppBaseTheme" >
-
-                    <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-                </style>
             </file>
             <file
                 path="/Users/devarajns/Documents/gtoglass/GTOGlass/app/src/main/res/values-sw720dp-land/dimens.xml"

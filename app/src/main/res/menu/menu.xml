@@ -16,11 +16,23 @@
 
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/list"
-        android:title="@string/list"
+        android:id="@+id/h1"
+        android:title="@string/h1"
         android:icon="@drawable/logo1"/>
     <item
-        android:id="@+id/stop"
-        android:title="@string/stop"
+    android:id="@+id/h2"
+    android:title="@string/h2"
+    android:icon="@drawable/logo1"/>
+    <item
+    android:id="@+id/h3"
+    android:title="@string/h3"
+    android:icon="@drawable/logo1"/>
+    <item
+    android:id="@+id/venture"
+    android:title="@string/venture"
+    android:icon="@drawable/logo1"/>
+    <item
+        android:id="@+id/camera"
+        android:title="@string/camera"
         android:icon="@drawable/logo1"/>
 </menu>

@@ -1,6 +1,7 @@
 
 package com.cognizant.gtoglass.activity;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.content.Intent;
@@ -14,133 +15,104 @@ import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.WindowManager.LayoutParams;
 
-public class ScreenSlideActivity extends FragmentActivity {
+import com.google.android.glass.app.Card;
+import com.google.android.glass.touchpad.Gesture;
+import com.google.android.glass.touchpad.GestureDetector;
+import com.google.android.glass.widget.CardScrollAdapter;
+import com.google.android.glass.widget.CardScrollView;
 
-    // TODO icons for menu items
+import java.util.ArrayList;
+import java.util.Arrays;
 
+public class ScreenSlideActivity extends Activity implements GestureDetector.BaseListener {
+
+    public static final String EXTRA_SELECTED_VALUE = "selected_value";
+    private GestureDetector mDetector;
     private static final String LOG_TAG = "GTOGlass";
 
-    private static final int NUM_PAGES = TargetFinderActivity.TARGET_NAMES.length;
-
-    private ViewPager mPager;
-
-    private PagerAdapter mPagerAdapter;
-
+    private ArrayList<Card> mlcCards = new ArrayList<Card>();
+    private ArrayList<String> mlsText = new ArrayList<String>(Arrays.asList(TargetFinderActivity.TARGET_NAMES));
+    private CardScrollView csvCardsView;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
 
-        getWindow().addFlags(LayoutParams.FLAG_KEEP_SCREEN_ON);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().addFlags(
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-
-        setContentView(R.layout.activity_screen_slide);
-
-        mPager = (ViewPager) findViewById(R.id.pager);
-        mPagerAdapter = new ScreenSlidePagerAdapter(getFragmentManager());
-        mPager.setAdapter(mPagerAdapter);
-        mPager.setOnPageChangeListener(new ViewPager.SimpleOnPageChangeListener() {
-            @Override
-            public void onPageSelected(int position) {
-                // When changing pages, reset the action bar actions since they are dependent
-                // on which page is currently active. An alternative approach is to have each
-                // fragment expose actions itself (rather than the activity exposing actions),
-                // but for simplicity, the activity provides the actions in this sample.
-                invalidateOptionsMenu();
-            }
-        });
-
-        mPager.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                select();
-            }
-        });
-    }
-
-    public void next() {
-        mPager.setCurrentItem(mPager.getCurrentItem() + 1);
-    }
-
-    public void prev() {
-        mPager.setCurrentItem(mPager.getCurrentItem() - 1);
-    }
-
-    public void select() {
-        Intent intent = new Intent(this, TargetFinderActivity.class);
-        intent.putExtra(TargetFinderActivity.TARGET_INDEX_EXTRA, mPager.getCurrentItem());
-        startActivity(intent);
-    }
-
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        Log.i(LOG_TAG, "onTouchEvent, event = " + event);
-        return super.onTouchEvent(event);
-    }
-
-    @Override
-    public boolean dispatchKeyEvent(final KeyEvent event) {
-        Log.i(LOG_TAG, "dispatchKeyEvent, event = " + event);
-
-        final int action = event.getAction();
-        if (action != KeyEvent.ACTION_DOWN) {
-            return false;
+        for (int i = 0; i < mlsText.size(); i++)
+        {
+            Card newCard = new Card(this);
+          //  newCard.setFullScreenImages(true);
+            newCard.setText(mlsText.get(i));
+            mlcCards.add(newCard);
         }
 
-        final int keyCode = event.getKeyCode();
-        switch (keyCode) {
-            // Back button on standard Android, swipe down on Google Glass
-            case KeyEvent.KEYCODE_BACK:
-                finish();
-                return true;
-
-            // Left and right swipe through the cameras on Google Glass.
-            // On phone, volume keys move through cameras
-            case KeyEvent.KEYCODE_TAB:
-            case KeyEvent.KEYCODE_VOLUME_UP:
-                if (event.isShiftPressed()) {
-                    prev();
-                } else {
-                    next();
+        csvCardsView = new CardScrollView(this) {
+            @Override
+            public final boolean dispatchGenericFocusedEvent(MotionEvent event) {
+                if (mDetector.onMotionEvent(event)) {
+                    return true;
                 }
-                return true;
-            case KeyEvent.KEYCODE_VOLUME_DOWN:
-                prev();
-                return true;
-
-            // Tapping views the camera.
-            case KeyEvent.KEYCODE_DPAD_CENTER:
-                select();
-                return true;
-
-            default:
-                return super.dispatchKeyEvent(event);
-        }
+                return super.dispatchGenericFocusedEvent(event);
+            }
+        };
+        csaAdapter cvAdapter = new csaAdapter();
+        csvCardsView.setAdapter(cvAdapter);
+        csvCardsView.activate();
+        setContentView(csvCardsView);
+        mDetector = new GestureDetector(this).setBaseListener(this);
     }
 
-    /**
-     * A simple pager adapter that represents 5 {@link ScreenSlidePageFragment} objects, in
-     * sequence.
-     */
-    private class ScreenSlidePagerAdapter extends FragmentStatePagerAdapter {
-        public ScreenSlidePagerAdapter(FragmentManager fm) {
-            super(fm);
+    @Override
+    public boolean onGenericMotionEvent(MotionEvent event) {
+        return mDetector.onMotionEvent(event);
+    }
+
+    @Override
+    public boolean onGesture(Gesture gesture) {
+        if (gesture == Gesture.TAP) {
+            Intent intent = new Intent(this, TargetFinderActivity.class);
+            intent.putExtra(TargetFinderActivity.TARGET_INDEX_EXTRA, csvCardsView.getSelectedItemPosition());
+            startActivity(intent);
+            return true;
+        }
+        return false;
+    }
+
+    private class csaAdapter extends CardScrollAdapter
+    {
+        @Override
+        public int findIdPosition(Object id)
+        {
+            return -1;
         }
 
         @Override
-        public Fragment getItem(int position) {
-            return ScreenSlidePageFragment.create(position);
+        public int findItemPosition(Object item)
+        {
+            return mlcCards.indexOf(item);
         }
 
         @Override
-        public int getCount() {
-            return NUM_PAGES;
+        public int getCount()
+        {
+            return mlcCards.size();
+        }
+
+        @Override
+        public Object getItem(int position)
+        {
+            return mlcCards.get(position);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent)
+        {
+            return mlcCards.get(position).toView();
         }
     }
 }

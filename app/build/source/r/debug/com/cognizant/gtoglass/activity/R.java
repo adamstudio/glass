@@ -45,20 +45,23 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int marker_shelter=0x7f02000b;
     }
     public static final class id {
+        public static final int camera=0x7f0b0011;
         public static final int content=0x7f0b000b;
         public static final int description=0x7f0b0008;
         public static final int frame=0x7f0b0000;
+        public static final int h1=0x7f0b000d;
+        public static final int h2=0x7f0b000e;
+        public static final int h3=0x7f0b000f;
         public static final int image1=0x7f0b000c;
         public static final int indicator=0x7f0b0001;
         public static final int indicator_web=0x7f0b0002;
         public static final int leftIndicator=0x7f0b0003;
-        public static final int list=0x7f0b000d;
         public static final int location=0x7f0b0005;
         public static final int main_text=0x7f0b000a;
         public static final int pager=0x7f0b0009;
         public static final int rightIndicator=0x7f0b0004;
-        public static final int stop=0x7f0b000e;
         public static final int text=0x7f0b0006;
+        public static final int venture=0x7f0b0010;
         public static final int web=0x7f0b0007;
     }
     public static final class layout {
@@ -74,40 +77,33 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int accelerometer=0x7f080000;
         public static final int action_settings=0x7f080001;
         public static final int app_name=0x7f080002;
-        public static final int dummy_button=0x7f080003;
-        public static final int dummy_content=0x7f080004;
-        public static final int geolocation=0x7f080005;
-        public static final int glass_voice_prompt=0x7f080006;
-        public static final int glass_voice_trigger=0x7f080007;
-        public static final int h1=0x7f080008;
-        public static final int h2=0x7f080009;
-        public static final int h3=0x7f08000a;
-        public static final int hello_world=0x7f08000b;
-        public static final int list=0x7f08000c;
-        public static final int show_compass_voice_trigger=0x7f08000d;
-        public static final int stop=0x7f08000e;
-        public static final int title_activity_compass_menu=0x7f08000f;
-        public static final int title_activity_main=0x7f080010;
-        public static final int title_activity_pan=0x7f080011;
-        public static final int venture=0x7f080012;
+        public static final int camera=0x7f080003;
+        public static final int dummy_button=0x7f080004;
+        public static final int dummy_content=0x7f080005;
+        public static final int geolocation=0x7f080006;
+        public static final int glass_voice_prompt=0x7f080007;
+        public static final int glass_voice_trigger=0x7f080008;
+        public static final int h1=0x7f080009;
+        public static final int h2=0x7f08000a;
+        public static final int h3=0x7f08000b;
+        public static final int hello_world=0x7f08000c;
+        public static final int list=0x7f08000d;
+        public static final int show_compass_voice_trigger=0x7f08000e;
+        public static final int stop=0x7f08000f;
+        public static final int title_activity_compass_menu=0x7f080010;
+        public static final int title_activity_main=0x7f080011;
+        public static final int title_activity_pan=0x7f080012;
+        public static final int venture=0x7f080013;
     }
     public static final class style {
-        /** 
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
- API 11 theme customizations can go here. 
+        /**  API 11 theme customizations can go here. 
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f090000;
-        /**  All customizations that are NOT specific to a particular API-level can go here. 
-         */
-        public static final int AppTheme=0x7f090001;
-        public static final int ButtonBar=0x7f090002;
-        public static final int ButtonBarButton=0x7f090003;
-        public static final int FullscreenActionBarStyle=0x7f090005;
-        public static final int FullscreenTheme=0x7f090004;
+        public static final int AppBaseTheme=0x7f090003;
+        public static final int ButtonBar=0x7f090000;
+        public static final int ButtonBarButton=0x7f090001;
+        public static final int FullscreenActionBarStyle=0x7f090004;
+        public static final int FullscreenTheme=0x7f090002;
     }
     public static final class xml {
         public static final int voice_trigger=0x7f040000;

@@ -13,8 +13,7 @@ import android.hardware.SensorManager;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
-import android.os.Bundle;
-import android.os.IBinder;
+import android.os.*;
 import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.Menu;
@@ -108,26 +107,35 @@ public class TargetFinderActivity extends Activity implements
     }
 
     @Override
-    public boolean onTouchEvent(MotionEvent event) {
-        Log.i(LOG_TAG, "onTouchEvent, event = " + event);
-        return super.onTouchEvent(event);
-    }
-    @Override
     public void onBackPressed() {
         Log.d("Gesture ", "onBackPressed");
         //Toast.makeText(getApplicationContext(), "Go Back", Toast.LENGTH_SHORT).show();
-        this.openOptionsMenu();
-
+        finish();
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
         switch (item.getItemId()) {
-            case R.id.list:
-                Intent intent = new Intent(this, ScreenSlideActivity.class);
+            case R.id.h1:
+                intent = new Intent(this, OneActivity.class);
                 startActivity(intent);
                 return true;
-            case R.id.stop:
-                finish();
+            case R.id.h2:
+                intent = new Intent(this, TwoActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.h3:
+                intent = new Intent(this, ThreeActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.venture:
+                intent = new Intent(this, FourActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.camera:
+                intent = new Intent(this, CameraActivity.class);
+                startActivity(intent);
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
@@ -140,37 +148,13 @@ public class TargetFinderActivity extends Activity implements
         return true;
     }
 
-
-    @Override
-    public boolean dispatchTouchEvent(MotionEvent ev) {
-        Log.i(LOG_TAG, "dispatchTouchEvent, event = " + ev);
-
-        if (ev.getAction() == MotionEvent.ACTION_DOWN) {
-            toggleShowUrl();
-            return true;
-        }
-
-        return super.dispatchTouchEvent(ev);
-    }
-
     private boolean showUrl() {
         Log.i(LOG_TAG, "showUrl");
-
         if (!mDisplay.isWebViewVisible()) {
             mDisplay.showDetailsView();
             return true;
         }
         return false;
-    }
-
-    private void nextTarget() {
-        Log.i(LOG_TAG, "nextTarget");
-
-        mTargetIndex++;
-        if (mTargetIndex >= mTargets.size()) {
-            mTargetIndex = 0;
-        }
-        mDisplay.showTarget(mTargets.get(mTargetIndex));
     }
 
     private void gotoTarget(int targetIndex) {
@@ -179,17 +163,15 @@ public class TargetFinderActivity extends Activity implements
         //if(!mSpeech.isSpeaking()) mSpeech.speak(mDisplay.target.name, TextToSpeech.QUEUE_FLUSH, null);
     }
 
-    private void previousTarget() {
-        Log.i(LOG_TAG, "previousTarget");
-
-        mTargetIndex--;
-        if (mTargetIndex < 0) {
-            mTargetIndex = mTargets.size() - 1;
+    @Override
+    public boolean onGenericMotionEvent(MotionEvent event) {
+        if (mGestureDetector != null) {
+            return mGestureDetector.onMotionEvent(event);
         }
-        mDisplay.showTarget(mTargets.get(mTargetIndex));
+        return false;
     }
 
-    private GestureDetector createGestureDetector(Context context) {
+    private GestureDetector createGestureDetector(final Context context) {
         GestureDetector gestureDetector = new GestureDetector(context);
         gestureDetector.setBaseListener(new GestureDetector.BaseListener() {
             @Override
@@ -199,6 +181,10 @@ public class TargetFinderActivity extends Activity implements
                     if (mTargetIndex < 5)
                         mDisplay.view.loadUrl("http://10.237.77.163:9000/socket?url=" + mDisplay.target.url + "&id=" + mTargetIndex);
                     return true;
+                } else if (gesture == Gesture.TWO_TAP) {
+                    Log.d("Gesture ", "dtap");
+                    openMenu();
+                    return true;
                 }
                 return false;
             }
@@ -206,7 +192,9 @@ public class TargetFinderActivity extends Activity implements
         return gestureDetector;
     }
 
-
+    private void openMenu(){
+        openOptionsMenu();
+    }
     private void toggleShowUrl() {
         // If showing webview, hide it.
         if (mDisplay.isWebViewVisible()) {
