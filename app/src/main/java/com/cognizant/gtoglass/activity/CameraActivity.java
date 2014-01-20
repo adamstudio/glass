@@ -105,7 +105,7 @@ public class CameraActivity extends Activity
             Log.i(LOG_TAG, "error");
         }
         AsyncHttpClient client = new AsyncHttpClient();
-        client.post("http://10.232.58.26:9000/images", params, getResponseHandler());
+        client.post("http://10.237.77.163:9000/images", params, getResponseHandler());
     }
 
     protected AsyncHttpResponseHandler getResponseHandler() {
