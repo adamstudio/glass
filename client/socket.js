@@ -20,6 +20,7 @@ app.get('/monitor.js', function(request, response, next) {
 }); 
 app.post('/images', addImage); // endpoint to post new images
 app.get('/images', getImages); 
+app.get('/images/:uuid', getImage);
 
 app.use(express.static(path.join(__dirname, './uploads')));
 
@@ -35,6 +36,11 @@ fs.exists(__dirname + '/uploads', function (exists) {
         })
     }
 });
+
+function getImage(req, res){ 
+    var file = __dirname + "/uploads/"+req.params.uuid;
+  res.download(file); 
+};
 
 // Connect to database
 var url = "mongodb://localhost:27017/PictureFeed";
