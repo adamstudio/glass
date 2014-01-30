@@ -46,13 +46,6 @@ public class Target {
         this.name = name;
     }
 
-    public Target(String url, double lon, double lat, String name, String videoUrl) {
-        this.url = url;
-        this.lat = lat;
-        this.lon = lon;
-        this.name = name;
-    }
-
     public Location asLocation() {
         final Location targetLocation = new Location("ThroughGlass");
         targetLocation.setLatitude(lat);
